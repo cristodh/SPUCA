@@ -1,0 +1,25 @@
+{
+  "name": "spuca",
+  "version": "1.0.0",
+  "description": "Sistema de Permisos para Uso de Computadoras Académicas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristodh/SPUCA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cristodh/SPUCA/issues"
+  },
+  "homepage": "https://github.com/cristodh/SPUCA#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
