@@ -1,0 +1,41 @@
+.columnas {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: azure;
+    
+}
+
+.columnaI {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background-color: darkblue;
+    
+}
+
+#imagenPerfil {
+    width: 200px;
+}
+
+.columnaD {
+    display: grid;
+    background-color: rgb(226, 226, 233);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2fr);
+}
+
+.info-solicitud{
+    display: flex;
+    align-items: center;
+    height: 200px;
+}
+
+
