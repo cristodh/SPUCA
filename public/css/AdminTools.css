@@ -1,0 +1,86 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f5f8fa;
+  color: #14171a;
+}
+
+/* Header */
+header {
+  background: white;
+  padding: 15px 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  color: #1da1f2;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Main content */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  color: #1da1f2;
+}
+
+.card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccd6dd;
+  border-radius: 8px;
+}
+
+.card button {
+  background: #1da1f2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card button:hover {
+  background: #0d95e8;
+}
+
+/* Log */
+.log {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.log h3 {
+  margin-bottom: 10px;
+  color: #1da1f2;
+}
+
+#studentLog li {
+  border-bottom: 1px solid #e1e8ed;
+  padding: 8px 0;
+}
