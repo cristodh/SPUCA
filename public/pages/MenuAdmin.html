@@ -9,13 +9,19 @@
 </head>
 
 <body>
-    <header>
-        <img src="../imgs/fwd sin fondo.png" alt="logo">
-        <button id="logout">Log Out</button>
-    </header>
+    
+        <header>
+            <img src="../imgs/fwd sin fondo.png" alt="logo">
+            <button id="logout">Log Out</button>
+        </header>
+
+
 
     <div class="columnas">
-        <div class=" columnaI">
+        <!-- COLUMNA IZQUIERDA (perfil) -->
+         
+        <div class="columnaI">
+
             <img src="../imgs/fotoPerfilAdmin.png" alt="imagenDePerfil" id="imagenPerfil">
             <h1 id="nombreAdmin">nombreAdmin</h1>
             <h5 id="role">role</h5>
@@ -23,6 +29,8 @@
             <h5 id="sede">sede</h5>
             <p>GRAFICA</p>
         </div>
+
+        <!-- COLUMNA DERECHA (tabs + tarjetas) -->
         <div class="columnaD">
             <div class="tabs">
                 <button class="tab active" data-tab="todas">Todas</button>
@@ -33,7 +41,7 @@
 
             <div class="contenido-tabs">
                 <div class="tab-content active" id="todas">
-                    <!-- Solicitudes múltiples -->
+                    <!-- Grid de solicitudes -->
                     <div class="solicitud">
                         <div class="info-solicitud">
                             <img src="usuario1.jpg" alt="Usuario" class="foto-usuario">
@@ -41,13 +49,51 @@
                             <p><strong>Fecha:</strong> 2025-08-27</p>
                             <p><strong>Estado:</strong> Pendiente</p>
                         </div>
+
+                        <div class="info-solicitud">
+                            <img src="usuario1.jpg" alt="Usuario" class="foto-usuario">
+                            <p><strong>Nombre:</strong> Juan Pérez</p>
+                            <p><strong>Fecha:</strong> 2025-08-27</p>
+                            <p><strong>Estado:</strong> Pendiente</p>
+                        </div>
+
+                        <div class="info-solicitud">
+                            <img src="usuario1.jpg" alt="Usuario" class="foto-usuario">
+                            <p><strong>Nombre:</strong> Juan Pérez</p>
+                            <p><strong>Fecha:</strong> 2025-08-27</p>
+                            <p><strong>Estado:</strong> Pendiente</p>
+                        </div>
+
+                        <div class="info-solicitud">
+                            <img src="usuario1.jpg" alt="Usuario" class="foto-usuario">
+                            <p><strong>Nombre:</strong> Juan Pérez</p>
+                            <p><strong>Fecha:</strong> 2025-08-27</p>
+                            <p><strong>Estado:</strong> Pendiente</p>
+                        </div>
+
+                        <div class="info-solicitud">
+                            <img src="usuario1.jpg" alt="Usuario" class="foto-usuario">
+                            <p><strong>Nombre:</strong> Juan Pérez</p>
+                            <p><strong>Fecha:</strong> 2025-08-27</p>
+                            <p><strong>Estado:</strong> Pendiente</p>
+                        </div>
+
+                        <div class="info-solicitud">
+                            <img src="usuario1.jpg" alt="Usuario" class="foto-usuario">
+                            <p><strong>Nombre:</strong> Juan Pérez</p>
+                            <p><strong>Fecha:</strong> 2025-08-27</p>
+                            <p><strong>Estado:</strong> Pendiente</p>
+                        </div>
                     </div>
-                    <!-- Repite este bloque para cada solicitud -->
                 </div>
 
+                <!-- Puedes replicar estructura para aceptadas / rechazadas / completadas -->
             </div>
         </div>
+    </div>
 
+    <script src="../js/MenuAdmin.js"></script>
 </body>
+
 
 </html>
