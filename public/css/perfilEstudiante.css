@@ -1,0 +1,49 @@
+.encabezado{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#columnas{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    height: 600px;
+    
+
+}
+
+.imgUser{
+    margin-top: 50px;
+
+}
+
+
+#columnaI{
+    background-color: cadetblue;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    
+
+}
+
+#columnaD{
+    background-color: darkcyan;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+   
+
+}
+
+#btnPend, #btnAcep, #btnDene{
+    margin-top: 30px;
+    margin-left: 50px;
+    border-radius: 20px 20px;
+}
+
+#contenedorPeticiones{
+    background-color: azure;
+    width: 800px;
+    text-align: center;
+}

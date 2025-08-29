@@ -1,0 +1,10 @@
+const nombreC= document.getElementById('nombreC')
+const numeCe= document.getElementById('numeCe')
+const ident= document.getElementById('ident')
+const correo= document.getElementById('correo')
+const sede= document.getElementById('sede')
+const fechaSa= document.getElementById('fechaSa')
+const fechaEn= document.getElementById('fechaEn')
+const checkacepto= document.getElementById('checkacepto')
+const enviar= document.getElementById('enviar')
+

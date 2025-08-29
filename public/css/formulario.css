@@ -1,0 +1,140 @@
+body{
+  background: linear-gradient(to right, #1B1E27, #1f212893, rgba(0, 0, 0, 0)),
+  url("../imgs/pc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+form {
+  background-color: white;
+  width: 100%;
+  max-width: 650px;
+  z-index: 2;
+  border-radius: 50px;
+  margin: 30px;
+}
+
+label{
+  display: block;
+  margin: 0.5rem 0 0.2rem;
+  font-size: 18px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid gray;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  background-color: #fbfbfb;
+}
+
+.contenedorGeneral{
+  padding: 2rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contenedorGeneral h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.infoPersonal label {
+  display: block;
+  margin: 0.8rem 0 0.3rem;
+  font-weight: 500;
+  
+}
+
+.infoPersonal input,
+.infoPersonal select {
+  width: 90%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  transition: border 0.2s, box-shadow 0.2s;
+  border-style: none;
+  box-shadow: 1px 1px rgb(189, 181, 181);
+}
+
+.infoPersonal input:focus,
+.infoPersonal select:focus {
+  border-style: none;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255,140,47,0.5);
+  box-shadow: 3px 3px rgb(189, 181, 181);
+}
+.checkContenedor{
+    display: flex;
+    align-items: center;
+    
+}
+#acepto{
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+#acepto input {
+  width: auto;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+#enviar {
+  color: rgb(36, 36, 30);
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+  background-color: #007BFF;
+  transition: background 0.3s;
+}
+
+#enviar:hover {
+  background: #199EF3;
+}
+
+#selecSede {
+  width: 95%;
+  padding: 0.8rem 1rem;
+  transition: border 0.2s, box-shadow 0.2s;
+  border-style: none;
+  box-shadow: 1px 1px rgb(189, 181, 181);
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fbfbfb;
+  color: #333;
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-position: right 1rem center;
+  background-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#selecSede:focus {
+  border-style: none;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255,140,47,0.5);
+  box-shadow: 3px 3px rgb(189, 181, 181);
+}
+
+#fechaSa, #fechaEn{
+  cursor: text;
+}
