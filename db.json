@@ -1,0 +1,26 @@
+{
+  "estudiantes": [],
+  "docentes": [],
+  "cpu": [],
+  "solicitudes": [
+    {
+      "id": "6656",
+      "nombreSolicitante": "Pepe Viyuela",
+      "cedulaSolicitante": "118850060",
+      "correoSolicitante": "pepe@gmail.com",
+      "sedeSolicitante": "capri",
+      "fechaSalida": "2025-08-29",
+      "fechaEntrega": "2025-08-29"
+    },
+    {
+      "id": "9e0e",
+      "nombreSolicitante": "Pepe Viyuela",
+      "cedulaSolicitante": "1234567",
+      "correoSolicitante": "pepe@gmail.com",
+      "sedeSolicitante": "capri",
+      "fechaSalida": "2025-08-30",
+      "fechaEntrega": "2025-08-31",
+      "ModeloDePc": "Lenovo wy245"
+    }
+  ]
+}

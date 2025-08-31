@@ -53,6 +53,7 @@ header {
     height: 175px;
     background: url(../imgs/fondoPortada2.png);
     background-size: cover;
+    
 }
 
 .logoFwd {
@@ -88,8 +89,6 @@ header {
 #logOut :active {
     transform: translateY(1px);
 }
-
-
 
 
 /* ===== Layout principal ===== */
@@ -154,9 +153,7 @@ header {
 }
 
 /* efecto flotante al hover */
-.columnaI:hover {
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
-}
+
 
 /* ===== Columna Derecha (tabs + tarjetas) ===== */
 .columnaD {
@@ -167,6 +164,7 @@ header {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
     display: flex;
     flex-direction: column;
+    
 }
 
 /* Tabs */
@@ -247,23 +245,3 @@ header {
     background: #ffffff;
     border: 2px solid #00537A;
 }
-
-/*boton de nuevo formulario*/
-
-.nuevoForm {
-    padding: 10px 18px;
-    border: none;
-    background-color: #51a4fd;
-    border-radius: 22px;
-    cursor: pointer;
-    font-weight: 700;
-    color: white;
-    transition: background-color .25s ease, transform .1s ease;
-}
-
-.nuevoForm:hover{
-    background-color: #71c5fa;
-    color: #013C58;
-}
-
-

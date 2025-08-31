@@ -19,6 +19,7 @@ form {
   z-index: 2;
   border-radius: 50px;
   margin: 30px;
+  box-shadow: 10px 7px 15px 5px rgba(0, 0, 0, 0.295);
 }
 
 label{
@@ -64,7 +65,7 @@ input, select, textarea {
   margin-bottom: 1rem;
   transition: border 0.2s, box-shadow 0.2s;
   border-style: none;
-  box-shadow: 1px 1px rgb(189, 181, 181);
+  box-shadow: 2px 2px 3px rgb(189, 181, 181);
 }
 
 .infoPersonal input:focus,
@@ -72,7 +73,8 @@ input, select, textarea {
   border-style: none;
   outline: none;
   box-shadow: 0 0 5px rgba(255,140,47,0.5);
-  box-shadow: 3px 3px rgb(189, 181, 181);
+  box-shadow: 5px 5px 5px rgb(189, 181, 181);
+  border-radius: 10px;
 }
 .checkContenedor{
     display: flex;
@@ -93,7 +95,7 @@ input, select, textarea {
 }
 
 #enviar {
-  color: rgb(36, 36, 30);
+  color: white;
   border: none;
   padding: 1rem;
   font-size: 1rem;
@@ -101,12 +103,13 @@ input, select, textarea {
   cursor: pointer;
   margin-top: 1rem;
   width: 100%;
-  background-color: #007BFF;
+  background-color: #51a4fd;
   transition: background 0.3s;
 }
 
 #enviar:hover {
-  background: #199EF3;
+  background: #71c5fa;
+  color: #1B1E27;
 }
 
 #selecSede {
