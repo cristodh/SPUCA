@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Registro.css">
+    <title>Registro</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <img src="../imgs/fwd sin fondo.png" alt="Logo FWD" class="logo">
+        <h1 class="RegistroTitulo">Registro</h1>
+        <ul class="nav-links">
+            <li id="linkEstudiante" class="activo">Estudiante</li>
+            <li id="linkDocente">Docente</li>
+            <li id="linkAdmin">Administrador</li>
+        </ul>
+    </nav>
+
+    <div class="contenedor2">
+
+        <!-- ESTUDIANTE -->
+        <div id="Estudiante">
+            <!-- Login Estudiante -->
+            <div id="RegistroEstudianteOptions">
+                <h2>Inicio de Sesión Estudiante</h2>
+                <form>
+                    <label for="input-email">Correo:</label><br>
+                    <input type="email" id="input-emailEstudianteIS" placeholder="Correo" required><br>
+
+                    <label for="input-Cedula">Cédula:</label><br>
+                    <input type="number" id="input-IDEstudianteIS" placeholder="Cédula" required><br>
+
+                    <label for="input-password">Contraseña:</label><br>
+                    <input type="password" id="input-passwordEstudianteIS" placeholder="Contraseña" required>
+                    <br>
+
+                    <button type="button" id="btnISEstudiante">Iniciar Sesión</button>
+                </form>
+                <p>¿No eres miembro? <span id="RegistroEstudianteFormulario" class="link">Crear Cuenta</span></p>
+            </div>
+
+            <!-- Registro Estudiante -->
+            <div id="RegistroEstudianteFormularioOculto" style="display:none;">
+                <button id="bntAtras">Atrás</button>
+                <h2>Registro Estudiante</h2>
+                <form id="formEstudiante">
+                    <!-- Nombre -->
+                    <label for="NombreEstudiante">Nombre:</label><br>
+                    <input id="NombreEstudiante" type="text" placeholder="Nombre" required><br>
+
+                    <!-- Apellidos -->
+                    <label for="ApellidosEstudiante">Apellidos:</label><br>
+                    <input id="ApellidosEstudiante" type="text" placeholder="Apellidos" required><br>
+
+                    <!-- Cédula -->
+                    <label for="CedulaEstudiante">Cédula:</label><br>
+                    <input type="number" id="CedulaEstudiante" required><br>
+
+                    <!-- Fecha -->
+                    <label for="fechaEstudiante">Fecha de Nacimiento:</label><br>
+                    <input type="text" id="fechaEstudiante" placeholder="DD/MM/AAAA" required><br>
+
+                    <!-- Correo -->
+                    <label for="emailEstudianteR">Correo Electrónico:</label><br>
+                    <input id="emailEstudianteR" type="email" placeholder="Correo Electrónico" required><br>
+
+                    <!-- Contraseña -->
+                    <label for="passwordEstudianteR">Contraseña:</label><br>
+                    <input id="passwordEstudianteR" type="password" placeholder="Contraseña" required><br>
+
+                    <!-- Confirmar -->
+                    <label for="passwordEstudianteRConfirmar">Confirmar Contraseña:</label><br>
+                    <input type="password" id="passwordEstudianteRConfirmar" placeholder="Confirmar Contraseña"
+                        required><br><br>
+
+                    <!-- Preguntas -->
+                    <h2>Preguntas de Seguridad:</h2>
+                    <label for="pregunta1">¿Cuál es el nombre de tu primera mascota?</label><br>
+                    <input type="text" id="pregunta1" name="pregunta1"><br>
+                    <label for="pregunta2">¿Cuál es tu comida favorita?</label><br>
+                    <input type="text" id="pregunta2" name="pregunta2"><br>
+                    <label for="pregunta3">¿Cuál es el segundo nombre de tu madre?</label><br>
+                    <input type="text" id="pregunta3" name="pregunta3"><br><br>
+
+                    <!-- Dirección -->
+                    <label for="Provincia">Provincia:</label><br>
+                    <select id="Provincia" required>
+                        <option value="">Seleccione una opción:</option>
+                        <option value="San José">San José</option>
+                        <option value="Cartago">Cartago</option>
+                        <option value="Heredia">Heredia</option>
+                        <option value="Alajuela">Alajuela</option>
+                        <option value="Guanacaste">Guanacaste</option>
+                        <option value="Puntarenas">Puntarenas</option>
+                        <option value="Limón">Limón</option>
+                    </select><br>
+
+                    <textarea name="direccionCompleta" id="direccionCompleta"
+                        placeholder="(provincia, cantón, distrito, etc...)" required></textarea><br>
+
+                    <!-- Teléfono -->
+                    <label for="telefonoEstudiante">Teléfono personal:</label><br>
+                    <input type="tel" id="telefonoEstudiante" placeholder="Ej: +506 8888-8888" required><br>
+
+                    <button id="btnCrearEstudiante" type="button" class="Iniciar">Crear Cuenta</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- DOCENTE -->
+    <div id="Docente" style="display:none;">
+        <!-- Login Docente -->
+        <div id="RegistroDocenteOptions">
+            <h2>Inicio de Sesión Docente</h2>
+            <form>
+                <label for="CorreoDocente">Correo:</label><br>
+                <input type="email" id="input-emailDocenteIS" placeholder="Correo" required><br>
+
+                <label for="ContraseñaDocente">Contraseña:</label><br>
+                <input type="password" id="input-IDDocenteIS" placeholder="Contraseña" required><br>
+
+                <button type="button" id="IniciarSesiónDocente">Iniciar Sesión</button>
+            </form>
+            <p>¿No eres miembro? <span id="RegistroDocenteFormulario" class="link">Crear Cuenta</span></p>
+        </div>
+
+        <!-- Registro Docente -->
+        <div id="RegistroDocenteFormularioOculto" style="display:none;">
+            <button id="bntAtras2">Atrás</button>
+            <h2>Registro Docente</h2>
+            <form>
+                <!-- Token Profesor -->
+                <label>Token:</label><br>
+                <input id="Token" type="text" placeholder="Token" required><br>
+
+                <!-- Nombre Completo -->
+                <label>Nombre Completo:</label><br>
+                <input id="NombreDocente" type="text" placeholder="Nombre Docente" required><br>
+
+                <!-- Apellidos -->
+                <label>Apellidos:</label><br>
+                <input id="ApellidosDocente" type="text" placeholder="Apellidos" required><br>
+
+                <!--Cédula de perfil-->
+                <label>Cédula:</label><br>
+                <input type="number" id="CédulaDocente" name="CédulaDocente" required><br>
+
+                <!--Correo Electrónico -->
+                <label>Correo Electrónico:</label><br>
+                <input id="CorreoElectronicoDocenteR" type="email" placeholder="Correo Electrónico" required><br>
+
+                <!-- Contraseña -->
+                <label>Contraseña:</label><br>
+                <input id="input-passwordDocenteR" type="password" placeholder="Contraseña" required><br>
+
+                <label>Confirmar Contraseña:</label><br>
+                <input type="password" class="ContraseñaDocenteConfirmación" id="input-passwordDocenteRConfirmación"
+                    placeholder="Confirmar Contraseña" required><br>
+
+                <!-- Teléfono personal -->
+                <label for="telefonoPersonalDocente">Teléfono personal:</label><br>
+                <input type="tel" id="telefonoDocente" class="telefonoDocente" placeholder="Ej: +506 8888-8888"
+                    required><br>
+
+                <!-- Modalidad -->
+                <label for="modalidad">Modalidad:</label><br>
+                <select id="modalidad" class="modalidad" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="presencial" id="Presencial">Presencial</option>
+                    <option value="virtual" id="Virtual">Virtual</option>
+                    <option value="hibrida" id="Híbrida">Híbrida</option>
+                </select><br>
+                <button id="btnCrearCuentaDocente" class="Iniciar">Crear Cuenta</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Administrador-->
+    <div id="Administrador" style="display:none;">
+        <!-- Login Administrador -->
+        <div id="RegistroAdministradorOptions">
+            <h2>Inicio de Sesión Administrador</h2>
+            <form>
+                <label for="input-email">Correo:</label><br>
+                <input type="email" id="input-emailAdmin" placeholder="Correo"><br>
+
+                <label for="input-password">Contraseña:</label><br>
+                <input type="password" id="input-passwordAdmin" placeholder="Contraseña">
+                <br>
+
+                <button type="button" id="btnAdminIS">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="../js/Registro.js"></script>
+</body>
+
+</html>

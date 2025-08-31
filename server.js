@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'pages/MenuAdmin.html'));
+    res.sendFile(path.join(__dirname, 'public', 'pages/Registro.html'));
 });
 
 const PORT = 3000;
