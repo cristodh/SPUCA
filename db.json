@@ -1,26 +1,53 @@
 {
-  "estudiantes": [],
-  "docentes": [],
-  "cpu": [],
-  "solicitudes": [
+  "estudiantes": [
     {
-      "id": "6656",
-      "nombreSolicitante": "Pepe Viyuela",
-      "cedulaSolicitante": "118850060",
-      "correoSolicitante": "pepe@gmail.com",
-      "sedeSolicitante": "capri",
-      "fechaSalida": "2025-08-29",
-      "fechaEntrega": "2025-08-29"
+      "id": "a6fc",
+      "NombreEstudiante": "Alejandro",
+      "ApellidosEstudiante": "Machado",
+      "CedulaEstudiante": "23132",
+      "fechaEstudiante": "21/11/1998",
+      "emailEstudianteR": "AML",
+      "passwordEstudianteR": "1234",
+      "pregunta1": "a",
+      "pregunta2": "b",
+      "pregunta3": "c",
+      "Provincia": "San José",
+      "direccionCompleta": "san rafa",
+      "telefonoEstudiante": "+50486089212"
     },
     {
-      "id": "9e0e",
-      "nombreSolicitante": "Pepe Viyuela",
-      "cedulaSolicitante": "1234567",
-      "correoSolicitante": "pepe@gmail.com",
-      "sedeSolicitante": "capri",
-      "fechaSalida": "2025-08-30",
-      "fechaEntrega": "2025-08-31",
-      "ModeloDePc": "Lenovo wy245"
+      "id": "4676",
+      "NombreEstudiante": "Chris",
+      "ApellidosEstudiante": "Delgado",
+      "CedulaEstudiante": "11540496",
+      "fechaEstudiante": "29/09/1996",
+      "emailEstudianteR": "cristodh@hotmail.com",
+      "passwordEstudianteR": "1234",
+      "pregunta1": "a",
+      "pregunta2": "a",
+      "pregunta3": "s",
+      "Provincia": "Guanacaste",
+      "direccionCompleta": "as",
+      "telefonoEstudiante": "63007974"
+    }
+  ],
+  "docentes": [],
+  "cpu": [],
+  "admins": [
+    {
+      "usuario": "AML",
+      "contrasena": 1234,
+      "id": "132a"
+    },
+    {
+      "usuario": "MCA",
+      "contrasena": 1234,
+      "id": "81e2"
+    },
+    {
+      "usuario": "CDH",
+      "contrasena": 1234,
+      "id": "14b7"
     }
   ]
 }
