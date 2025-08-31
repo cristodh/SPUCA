@@ -15,7 +15,7 @@ async function postDataEst(obj) {
 
 async function putDataEst(obj) {
     try {
-        const peticion = await fetch(`http://localhost:2929/estudiantes/${obj.id}`, {
+        const peticion = await fetch("http://localhost:2929/estudiantes", {
             method: "PATCH",
             headers: {"Content-Type": "application/json" },
             body: JSON.stringify(obj)
@@ -42,7 +42,7 @@ async function getDataEst() {
 
 async function deleteDataEst(obj) {
     try {
-        const peticion = await fetch(`http://localhost:2929/estudiantes/${obj}`, {
+        const peticion = await fetch("http://localhost:2929/estudiantes", {
             method: "DELETE",
             headers: {"Content-Type": "application/json" },
         });
@@ -72,7 +72,7 @@ async function postDataDoc(obj) {
 
 async function putDataDoc(obj) {
     try {
-        const peticion = await fetch(`http://localhost:2929/docentes/${obj.id}`, {
+        const peticion = await fetch("http://localhost:2929/docentes", {
             method: "PATCH",
             headers: {"Content-Type": "application/json" },
             body: JSON.stringify(obj)
@@ -98,7 +98,7 @@ async function getDataDoc() {
 }
 async function deleteDataDoc(obj) {
     try {
-        const peticion = await fetch("http://localhost:2929/docentes/${obj}",{
+        const peticion = await fetch("http://localhost:2929/docentes",{
             method: "DELETE",
             headers: {"Content-Type": "application/json" },
         });
@@ -127,7 +127,7 @@ async function postDataCpu(obj) {
 
 async function putDataCpu(obj) {
     try {
-        const peticion = await fetch(`http://localhost:2929/cpu/${obj.id}`, {
+        const peticion = await fetch("http://localhost:2929/cpu", {
             method: "PATCH",
             headers: {"Content-Type": "application/json" },
             body: JSON.stringify(obj)
@@ -154,7 +154,7 @@ async function getDataCpu() {
 
 async function deleteDataCpu(obj) {
     try {
-        const peticion = await fetch(`http://localhost:2929/cpu/${obj}`, {
+        const peticion = await fetch("http://localhost:2929/cpu", {
             method: "DELETE",
             headers: {"Content-Type": "application/json" },
         });

@@ -1,5 +1,8 @@
 {
-    "estudiantes": [],
+    "estudiantes": [
+        { "id": 1, "nombre": "Juan Pérez", "cpu": null },
+    { "id": 2, "nombre": "Ana López", "cpu": null }
+    ],
 
     "docentes": [],
 
