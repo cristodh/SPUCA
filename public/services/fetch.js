@@ -165,6 +165,60 @@ async function deleteDataCpu(obj) {
     }
 }
 
+/*Solicitudes*/
+async function postDataSolicitudes(obj) {
+    try {
+        const peticion = await fetch("http://localhost:2929/solicitudes", {
+            method: "POST",
+            headers: {"Content-Type": "application/json" },
+            body: JSON.stringify(obj)
+        });
+        const respuesta = await peticion.json();
+        return respuesta;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+async function putDataSolicitudes(obj) {
+    try {
+        const peticion = await fetch(`http://localhost:2929/solicitudes/${obj.id}`, {
+            method: "PATCH",
+            headers: {"Content-Type": "application/json" },
+            body: JSON.stringify(obj)
+        });
+        const respuesta = await peticion.json();
+        return respuesta;
+    } catch (error) {
+        console.log(error);        
+    }
+}
+
+async function getDataSolicitudes() {
+    try {
+        const peticion = await fetch("http://localhost:2929/solicitudes", {
+        method: "GET",
+        headers:{"Content-Type": "application/json" },
+        })
+    const respuesta = await peticion.json();
+    return respuesta;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+async function deleteDataSolicitudes(obj) {
+    try {
+        const peticion = await fetch(`http://localhost:2929/solicitudes/${obj}`, {
+            method: "DELETE",
+            headers: {"Content-Type": "application/json" },
+        });
+        const respuesta = await peticion.json();
+        return respuesta;
+    }  catch (error) {
+        console.log(error);
+    }
+}
 export { postDataEst, putDataEst, getDataEst, deleteDataEst,
          postDataDoc, putDataDoc, getDataDoc, deleteDataDoc,
-         postDataCpu, putDataCpu, getDataCpu, deleteDataCpu };
+         postDataCpu, putDataCpu, getDataCpu, deleteDataCpu,postDataSolicitudes,putDataSolicitudes,getDataSolicitudes,deleteDataSolicitudes };

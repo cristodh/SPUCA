@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/MenuAdmin.css">
+</head>
+
+<body>
+    
+        <header>
+            <img src="../imgs/fwd sin fondo.png" class="logoFwd" alt="logo">
+            <button id="logout"><img src="../imgs/salida blanco.png" id="imgLogo" alt=""></button>
+        </header>
+
+
+
+    <div class="columnas">
+        <!-- COLUMNA IZQUIERDA (perfil) -->
+         
+        <div class="columnaI">
+
+            <img src="../imgs/fotoPerfilAdmin.png" alt="imagenDePerfil" id="imagenPerfil">
+            <h1 id="nombreAdmin">nombreAdmin</h1>
+            <h5 id="role">role</h5>
+            <h5 id="correo">correo</h5>
+            <h5 id="sede">sede</h5>
+            <p><img src="../imgs/grafico-histograma.png" width="100" height="100" alt=""></p>
+        </div>
+
+        <!-- COLUMNA DERECHA (tabs + tarjetas) -->
+        <div class="columnaD">
+            <div class="tabs">
+                <button class="tab active" data-tab="todas">Todas</button>
+                <button class="tab" data-tab="aceptadas">Aceptadas</button>
+                <button class="tab" data-tab="rechazadas">Rechazadas</button>
+                <button class="tab" data-tab="completadas">Completadas</button>
+            </div>
+
+            <div class="contenido-tabs">
+                <div class="tab-content active" id="todas">
+                    <!-- Grid de solicitudes -->
+                    <div class="solicitud">
+                        <div class="info-solicitud">
+                            <img src="../imgs/chico.png" alt="Usuario" class="foto-usuario">
+                            <p><strong>Nombre:</strong> Juan Pérez</p>
+                            <p><strong>Fecha:</strong> 2025-08-27</p>
+                            <p><strong>Estado:</strong> Pendiente</p>
+                        </div>
+
+                        <div class="info-solicitud">
+                            <img src="../imgs/chico.png" alt="Usuario" class="foto-usuario">
+                            <p><strong>Nombre:</strong> Juan Pérez</p>
+                            <p><strong>Fecha:</strong> 2025-08-27</p>
+                            <p><strong>Estado:</strong> Pendiente</p>
+                        </div>
+
+                        <div class="info-solicitud">
+                            <img src="../imgs/chico.png" alt="Usuario" class="foto-usuario">
+                            <p><strong>Nombre:</strong> Juan Pérez</p>
+                            <p><strong>Fecha:</strong> 2025-08-27</p>
+                            <p><strong>Estado:</strong> Pendiente</p>
+                        </div>
+
+                        <div class="info-solicitud">
+                            <img src="../imgs/chico.png" alt="Usuario" class="foto-usuario">
+                            <p><strong>Nombre:</strong> Juan Pérez</p>
+                            <p><strong>Fecha:</strong> 2025-08-27</p>
+                            <p><strong>Estado:</strong> Pendiente</p>
+                        </div>
+
+                        <div class="info-solicitud">
+                            <img src="../imgs/chico.png" alt="Usuario" class="foto-usuario">
+                            <p><strong>Nombre:</strong> Juan Pérez</p>
+                            <p><strong>Fecha:</strong> 2025-08-27</p>
+                            <p><strong>Estado:</strong> Pendiente</p>
+                        </div>
+
+                        <div class="info-solicitud">
+                            <img src="../imgs/chico.png" alt="Usuario" class="foto-usuario">
+                            <p><strong>Nombre:</strong> Juan Pérez</p>
+                            <p><strong>Fecha:</strong> 2025-08-27</p>
+                            <p><strong>Estado:</strong> Pendiente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Puedes replicar estructura para aceptadas / rechazadas / completadas -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/MenuAdmin.js"></script>
+</body>
+
+
+</html>
