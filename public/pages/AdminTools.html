@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/AdminTools.css">
+</head>
+  <header>
+    <h1>ADMIN TOOLS</h1>
+  </header>
+
+  <main>
+    <!-- Asignación de CPUs -->
+    <div class="card">
+      <h2>Asignación de CPUs</h2>
+      <input id="studentName" type="text" placeholder="Nombre de Estudiante">
+      <input id="serialNumber" type="text" placeholder="Número de Serie">
+      <button onclick="assignCPU()">Asignar</button>
+    </div>
+
+    <!-- Asignación de Tokens -->
+    <div class="card">
+      <h2>Asignación Tokens</h2>
+      <input id="profName" type="text" placeholder="Nombre del Profesor">
+      <input id="token" type="text" placeholder="Token">
+      <button onclick="assignToken()">Asignar</button>
+    </div>
+
+    <!-- Eliminación Usuario -->
+    <div class="card">
+      <h2>Eliminación Usuario</h2>
+      <input id="deleteName" type="text" placeholder="Nombre del Profesor o Estudiante">
+      <button onclick="deleteUser()">Procesar</button>
+    </div>
+  </main>
+
+  <!-- Log de estudiantes -->
+  <section class="log">
+    <h3>Log de estudiantes</h3>
+    <ul id="studentLog"></ul>
+  </section>
+
+  <script type="module" src="../js/AdminTools.js"></script>
+
+</body>
+</html>

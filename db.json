@@ -1,0 +1,20 @@
+{
+    "estudiantes": [],
+    "docentes": [],
+    "cpu": [],
+
+    "admins": [
+        {
+            "usuario": "AML",
+            "contrasena": 1234
+        },
+        {
+            "usuario": "MCA",
+            "contrasena": 1234
+        },
+        {
+            "usuario": "CDH",
+            "contrasena": 1234
+        }
+    ]
+}
