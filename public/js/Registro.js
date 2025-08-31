@@ -165,3 +165,52 @@ async function agregarEstudiante() {
 
 btnCrearEstudiante.addEventListener('click', agregarEstudiante);
 
+//Agregar Registro Docente//
+
+import { postDataDoc } from "../services/fetch.js";
+
+// Referencias a los inputs del formulario de docente
+const Token = document.getElementById('Token');
+const NombreDocente = document.getElementById('NombreDocente');
+const ApellidosDocente = document.getElementById('ApellidosDocente');
+const CedulaDocente = document.getElementById('CédulaDocente');
+const CorreoElectronicoDocenteR = document.getElementById('CorreoElectronicoDocenteR');
+const passwordDocenteR = document.getElementById('input-passwordDocenteR');
+const passwordDocenteRConfirmar = document.getElementById('input-passwordDocenteRConfirmación');
+const telefonoDocente = document.getElementById('telefonoDocente');
+const modalidad = document.getElementById('modalidad');
+const btnCrearCuentaDocente = document.getElementById('btnCrearCuentaDocente');
+
+// Función para registrar docente
+async function agregarDocente() {
+  // Validación de contraseñas
+  if (passwordDocenteR.value !== passwordDocenteRConfirmar.value) {
+    alert("⚠️ Las contraseñas no coinciden");
+    return;
+  }
+
+  // Crear objeto con los datos del docente
+  const nuevoDocente = {
+    Token: Token.value,
+    NombreDocente: NombreDocente.value,
+    ApellidosDocente: ApellidosDocente.value,
+    CedulaDocente: CedulaDocente.value,
+    CorreoElectronicoDocenteR: CorreoElectronicoDocenteR.value,
+    passwordDocenteR: passwordDocenteR.value,
+    telefonoDocente: telefonoDocente.value,
+    modalidad: modalidad.value
+  };
+
+  try {
+    // Llamada a la función que hace POST al backend
+    const peticion = await postDataDoc(nuevoDocente);
+    console.log("✅ Respuesta del servidor:", peticion);
+    alert("Docente registrado correctamente");
+  } catch (error) {
+    console.error("❌ Error al registrar docente:", error);
+    alert("Error al registrar docente");
+  }
+}
+
+// Evento click del botón
+btnCrearCuentaDocente.addEventListener('click', agregarDocente);
