@@ -28,10 +28,10 @@
                 <h2>Inicio de Sesión Estudiante</h2>
                 <form>
                     <label for="input-email">Correo:</label><br>
-                    <input type="email" id="input-emailEstudianteIS" placeholder="Correo"required><br>
+                    <input type="email" id="input-emailEstudianteIS" placeholder="Correo" required><br>
 
                     <label for="input-Cedula">Cédula:</label><br>
-                    <input type="number" id="input-IDEstudianteIS" placeholder="Cédula"required><br>
+                    <input type="number" id="input-IDEstudianteIS" placeholder="Cédula" required><br>
 
                     <label for="input-password">Contraseña:</label><br>
                     <input type="password" id="input-passwordEstudianteIS" placeholder="Contraseña" required>
@@ -46,38 +46,38 @@
             <div id="RegistroEstudianteFormularioOculto" style="display:none;">
                 <button id="bntAtras">Atrás</button>
                 <h2>Registro Estudiante</h2>
-                <form >
+                <form id="formEstudiante">
                     <!-- Nombre -->
-                    <label>Nombre:</label> <br>
+                    <label for="NombreEstudiante">Nombre:</label><br>
                     <input id="NombreEstudiante" type="text" placeholder="Nombre" required><br>
-                    
+
                     <!-- Apellidos -->
-                    <label>Apellidos:</label> <br>
+                    <label for="ApellidosEstudiante">Apellidos:</label><br>
                     <input id="ApellidosEstudiante" type="text" placeholder="Apellidos" required><br>
-                    
-                    <!--Cédula de perfil-->
-                    <label>Cédula:</label><br>
-                    <input type="number" id="CédulaEstudiante" name="Cédula" required><br>
 
-                    <!-- Fecha de Nacimiento -->
-                    <label>Fecha de Nacimiento:</label><br>
-                    <input type="text" class="input-fecha" id="input-fechaEstudiante" placeholder="DD/MM/AAAA"required><br>
+                    <!-- Cédula -->
+                    <label for="CedulaEstudiante">Cédula:</label><br>
+                    <input type="number" id="CedulaEstudiante" required><br>
 
-                    <!--Correo Electrónico -->
-                    <label>Correo Electrónico:</label><br>
+                    <!-- Fecha -->
+                    <label for="fechaEstudiante">Fecha de Nacimiento:</label><br>
+                    <input type="text" id="fechaEstudiante" placeholder="DD/MM/AAAA" required><br>
+
+                    <!-- Correo -->
+                    <label for="emailEstudianteR">Correo Electrónico:</label><br>
                     <input id="emailEstudianteR" type="email" placeholder="Correo Electrónico" required><br>
 
                     <!-- Contraseña -->
-                    <label>Contraseña:</label><br>
-                    <input id="input-passwordEstudianteR" type="password" placeholder="Contraseña"required><br>
+                    <label for="passwordEstudianteR">Contraseña:</label><br>
+                    <input id="passwordEstudianteR" type="password" placeholder="Contraseña" required><br>
 
-                    <!-- Confirmar Contraseña -->
-                    <label>Confirmar Contraseña:</label><br>
-                    <input type="password" class="input-passwordEstudianteRConfirmar" id="input-password-confirmar"
-                        placeholder="Confirmar Contraseña" required><br><br>
+                    <!-- Confirmar -->
+                    <label for="passwordEstudianteRConfirmar">Confirmar Contraseña:</label><br>
+                    <input type="password" id="passwordEstudianteRConfirmar" placeholder="Confirmar Contraseña"
+                        required><br><br>
 
-                    <!-- Preguntas de Seguridad-->
-                    <h2>Preguntas de Seguridad:</h2><br>
+                    <!-- Preguntas -->
+                    <h2>Preguntas de Seguridad:</h2>
                     <label for="pregunta1">¿Cuál es el nombre de tu primera mascota?</label><br>
                     <input type="text" id="pregunta1" name="pregunta1"><br>
                     <label for="pregunta2">¿Cuál es tu comida favorita?</label><br>
@@ -85,31 +85,30 @@
                     <label for="pregunta3">¿Cuál es el segundo nombre de tu madre?</label><br>
                     <input type="text" id="pregunta3" name="pregunta3"><br><br>
 
-                    <!-- Dirección completa -->
-                    <label id="direccion">Dirección completa:</label><br>
-                    <select id="Provincia" class="Provincia"required>
+                    <!-- Dirección -->
+                    <label for="Provincia">Provincia:</label><br>
+                    <select id="Provincia" required>
                         <option value="">Seleccione una opción:</option>
-                        <option value="San José" id="SanJose">San José</option>
-                        <option value="Cartago" id="Cartago">Cartago</option>
-                        <option value="Heredia" id="Heredia">Heredia</option>
-                        <option value="Alajuela" id="Alajuela">Alajuela</option>
-                        <option value="Guanacaste" id="Guanacaste">Guanacaste</option>
-                        <option value="Puntarenas" id="Puntarenas">Puntarenas</option>
-                        <option value="Limón" id="Limón">Limón</option>
+                        <option value="San José">San José</option>
+                        <option value="Cartago">Cartago</option>
+                        <option value="Heredia">Heredia</option>
+                        <option value="Alajuela">Alajuela</option>
+                        <option value="Guanacaste">Guanacaste</option>
+                        <option value="Puntarenas">Puntarenas</option>
+                        <option value="Limón">Limón</option>
                     </select><br>
 
                     <textarea name="direccionCompleta" id="direccionCompleta"
-                        placeholder="(provincia, cantón, distrito, etc...)"required></textarea><br>
+                        placeholder="(provincia, cantón, distrito, etc...)" required></textarea><br>
 
-                    <!-- Teléfono personal -->
-                    <label for="telefonoPersonal">Teléfono personal:</label><br>
-                    <input type="tel" id="telefonoEstudiante" class="telefonoEstudiante"
-                        placeholder="Ej: +506 8888-8888" required><br>
+                    <!-- Teléfono -->
+                    <label for="telefonoEstudiante">Teléfono personal:</label><br>
+                    <input type="tel" id="telefonoEstudiante" placeholder="Ej: +506 8888-8888" required><br>
 
-                    <button id="btnCrearEstudiante" class="Iniciar">Crear Cuenta</button>
-                    </ul>
+                    <button id="btnCrearEstudiante" type="button" class="Iniciar">Crear Cuenta</button>
+                </form>
+
             </div>
-            </form>
         </div>
     </div>
 
@@ -141,30 +140,32 @@
 
                 <!-- Nombre Completo -->
                 <label>Nombre Completo:</label><br>
-                <input id="NombreDocente" type="text" placeholder="Nombre Docente" required ><br>
+                <input id="NombreDocente" type="text" placeholder="Nombre Docente" required><br>
 
                 <!-- Apellidos -->
                 <label>Apellidos:</label><br>
                 <input id="ApellidosDocente" type="text" placeholder="Apellidos" required><br>
 
                 <!--Cédula de perfil-->
-                    <label>Cédula:</label><br>
-                    <input type="number" id="CédulaDocente" name="CédulaDocente" required><br>
+                <label>Cédula:</label><br>
+                <input type="number" id="CédulaDocente" name="CédulaDocente" required><br>
 
                 <!--Correo Electrónico -->
                 <label>Correo Electrónico:</label><br>
-                <input id="CorreoElectronicoDocenteR" type="email" placeholder="Correo Electrónico"required><br>
+                <input id="CorreoElectronicoDocenteR" type="email" placeholder="Correo Electrónico" required><br>
 
                 <!-- Contraseña -->
                 <label>Contraseña:</label><br>
-                <input id="input-passwordDocenteR" type="password" placeholder="Contraseña"required><br>
+                <input id="input-passwordDocenteR" type="password" placeholder="Contraseña" required><br>
 
                 <label>Confirmar Contraseña:</label><br>
-                <input type="password" class="ContraseñaDocenteConfirmación" id="input-passwordDocenteRConfirmación" placeholder="Confirmar Contraseña" required><br>
+                <input type="password" class="ContraseñaDocenteConfirmación" id="input-passwordDocenteRConfirmación"
+                    placeholder="Confirmar Contraseña" required><br>
 
                 <!-- Teléfono personal -->
                 <label for="telefonoPersonalDocente">Teléfono personal:</label><br>
-                <input type="tel" id="telefonoDocente" class="telefonoDocente" placeholder="Ej: +506 8888-8888" required><br>
+                <input type="tel" id="telefonoDocente" class="telefonoDocente" placeholder="Ej: +506 8888-8888"
+                    required><br>
 
                 <!-- Modalidad -->
                 <label for="modalidad">Modalidad:</label><br>
@@ -180,21 +181,21 @@
     </div>
 
     <!-- Administrador-->
-        <div id="Administrador" style="display:none;">
-            <!-- Login Administrador -->
-            <div id="RegistroAdministradorOptions">
-                <h2>Inicio de Sesión Administrador</h2>
-                <form>
-                    <label for="input-email">Correo:</label><br>
-                    <input type="email" id="input-emailAdmin" placeholder="Correo"><br>
+    <div id="Administrador" style="display:none;">
+        <!-- Login Administrador -->
+        <div id="RegistroAdministradorOptions">
+            <h2>Inicio de Sesión Administrador</h2>
+            <form>
+                <label for="input-email">Correo:</label><br>
+                <input type="email" id="input-emailAdmin" placeholder="Correo"><br>
 
-                    <label for="input-password">Contraseña:</label><br>
-                    <input type="password" id="input-passwordAdmin" placeholder="Contraseña">
-                    <br>
+                <label for="input-password">Contraseña:</label><br>
+                <input type="password" id="input-passwordAdmin" placeholder="Contraseña">
+                <br>
 
-                    <button type="button" id="btnAdminIS">Iniciar Sesión</button>
-                </form>
-            </div>
+                <button type="button" id="btnAdminIS">Iniciar Sesión</button>
+            </form>
+        </div>
     </div>
 
     <script type="module" src="../js/Registro.js"></script>

@@ -114,10 +114,11 @@ botonAdmin.addEventListener("click", () => {
 
 //registro estudiante
 
-import { postDataEst } from "../services/fetch.js"
+import { postDataEst } from "../services/fetch.js";
+
 const NombreEstudiante = document.getElementById('NombreEstudiante');
 const ApellidosEstudiante = document.getElementById('ApellidosEstudiante');
-const CédulaEstudiante = document.getElementById('CédulaEstudiante');
+const CedulaEstudiante = document.getElementById('CedulaEstudiante');
 const fechaEstudiante = document.getElementById('fechaEstudiante');
 const emailEstudianteR = document.getElementById('emailEstudianteR');
 const passwordEstudianteR = document.getElementById('passwordEstudianteR');
@@ -125,29 +126,42 @@ const passwordEstudianteRConfirmar = document.getElementById('passwordEstudiante
 const pregunta1 = document.getElementById("pregunta1");
 const pregunta2 = document.getElementById("pregunta2");
 const pregunta3 = document.getElementById("pregunta3");
-const Provincia = document.getElementById("document.getElementById");
+const Provincia = document.getElementById("Provincia");
 const direccionCompleta = document.getElementById("direccionCompleta");
-const telefonoEstudiante = document.getElementById("telefonoEstudiante")
-const btnCrearEstudiante = document.getElementById("btnCrearEstudiante")
+const telefonoEstudiante = document.getElementById("telefonoEstudiante");
+const btnCrearEstudiante = document.getElementById("btnCrearEstudiante");
 
 async function agregarEstudiante() {
+  // Validación rápida de contraseñas
+  if (passwordEstudianteR.value !== passwordEstudianteRConfirmar.value) {
+    alert("⚠️ Las contraseñas no coinciden");
+    return;
+  }
+
   const nuevoEstudiante = {
     NombreEstudiante: NombreEstudiante.value,
     ApellidosEstudiante: ApellidosEstudiante.value,
-    CédulaEstudiante: CédulaEstudiante.value,
+    CedulaEstudiante: CedulaEstudiante.value,
     fechaEstudiante: fechaEstudiante.value,
     emailEstudianteR: emailEstudianteR.value,
     passwordEstudianteR: passwordEstudianteR.value,
-    passwordEstudianteRConfirmar: passwordEstudianteRConfirmar.value,
     pregunta1: pregunta1.value,
     pregunta2: pregunta2.value,
     pregunta3: pregunta3.value,
     Provincia: Provincia.value,
     direccionCompleta: direccionCompleta.value,
     telefonoEstudiante: telefonoEstudiante.value
+  };
+
+  try {
+    const peticion = await postDataEst(nuevoEstudiante);
+    console.log("✅ Respuesta del servidor:", peticion);
+    alert("Estudiante registrado correctamente");
+  } catch (error) {
+    console.error("❌ Error al registrar estudiante:", error);
+    alert("Error al registrar estudiante");
   }
-  const peticion = await postDataEst(nuevoEstudiante)
-  console.log(peticion);
 }
-btnCrearEstudiante.addEventListener('click', agregarEstudiante)
+
+btnCrearEstudiante.addEventListener('click', agregarEstudiante);
 
