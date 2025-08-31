@@ -14,6 +14,21 @@
       "Provincia": "San José",
       "direccionCompleta": "san rafa",
       "telefonoEstudiante": "+50486089212"
+    },
+    {
+      "id": "4676",
+      "NombreEstudiante": "Chris",
+      "ApellidosEstudiante": "Delgado",
+      "CedulaEstudiante": "11540496",
+      "fechaEstudiante": "29/09/1996",
+      "emailEstudianteR": "cristodh@hotmail.com",
+      "passwordEstudianteR": "1234",
+      "pregunta1": "a",
+      "pregunta2": "a",
+      "pregunta3": "s",
+      "Provincia": "Guanacaste",
+      "direccionCompleta": "as",
+      "telefonoEstudiante": "63007974"
     }
   ],
   "docentes": [],

@@ -115,6 +115,7 @@ botonAdmin.addEventListener("click", () => {
 //registro estudiante
 
 import { postDataEst } from "../services/fetch.js";
+import {postData,getData} from "../services/fetch2.js";
 
 const NombreEstudiante = document.getElementById('NombreEstudiante');
 const ApellidosEstudiante = document.getElementById('ApellidosEstudiante');
@@ -154,7 +155,8 @@ async function agregarEstudiante() {
   };
 
   try {
-    const peticion = await postDataEst(nuevoEstudiante);
+    const peticion = await postData("estudiantes",nuevoEstudiante)
+    // const peticion = await postDataEst(nuevoEstudiante);
     console.log("✅ Respuesta del servidor:", peticion);
     alert("Estudiante registrado correctamente");
   } catch (error) {
