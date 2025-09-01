@@ -1,3 +1,4 @@
+//----------------------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
   // Pestañas
   const linkEst = document.getElementById("linkEstudiante");
@@ -111,11 +112,11 @@ botonAdmin.addEventListener("click", () => {
     alert("Usuario o contraseña incorrectos.");
   }
 });
+//----------------------------------------------------------------------------------------------------------------
 
-//registro estudiante
+//registro estudiantes
 
-import { postDataEst } from "../services/fetch.js";
-import {postData,getData} from "../services/fetch2.js";
+import { getData, postData } from "../services/fetch2.js";
 
 const NombreEstudiante = document.getElementById('NombreEstudiante');
 const ApellidosEstudiante = document.getElementById('ApellidosEstudiante');
@@ -126,13 +127,15 @@ const passwordEstudianteR = document.getElementById('passwordEstudianteR');
 const passwordEstudianteRConfirmar = document.getElementById('passwordEstudianteRConfirmar');
 const pregunta1 = document.getElementById("pregunta1");
 const pregunta2 = document.getElementById("pregunta2");
-const pregunta3 = document.getElementById("pregunta3");
+const sede = document.getElementById("sede");
 const Provincia = document.getElementById("Provincia");
 const direccionCompleta = document.getElementById("direccionCompleta");
 const telefonoEstudiante = document.getElementById("telefonoEstudiante");
 const btnCrearEstudiante = document.getElementById("btnCrearEstudiante");
 
-async function agregarEstudiante() {
+//enviar info al DB.json
+async function agregarEstudiante(e) {
+  e.preventDefault()
   // Validación rápida de contraseñas
   if (passwordEstudianteR.value !== passwordEstudianteRConfirmar.value) {
     alert("⚠️ Las contraseñas no coinciden");
@@ -148,15 +151,14 @@ async function agregarEstudiante() {
     passwordEstudianteR: passwordEstudianteR.value,
     pregunta1: pregunta1.value,
     pregunta2: pregunta2.value,
-    pregunta3: pregunta3.value,
+    sede: sede.value,
     Provincia: Provincia.value,
     direccionCompleta: direccionCompleta.value,
     telefonoEstudiante: telefonoEstudiante.value
   };
 
   try {
-    const peticion = await postData("estudiantes",nuevoEstudiante)
-    // const peticion = await postDataEst(nuevoEstudiante);
+    const peticion = await postData("estudiantes", nuevoEstudiante);
     console.log("✅ Respuesta del servidor:", peticion);
     alert("Estudiante registrado correctamente");
   } catch (error) {
@@ -164,6 +166,124 @@ async function agregarEstudiante() {
     alert("Error al registrar estudiante");
   }
 }
-
 btnCrearEstudiante.addEventListener('click', agregarEstudiante);
 
+
+
+// iniciar sesión de ESTUDIANTE ------------------------------------
+// Inputs del login ESTUDIANTE
+const emailEstudianteIS = document.getElementById("input-emailEstudianteIS");
+const IDEstudianteIS = document.getElementById("input-IDEstudianteIS");
+const passwordEstudianteIS = document.getElementById("input-passwordEstudianteIS");
+const btnISEstudiante = document.getElementById("btnISEstudiante");
+
+// Evento al hacer clic en "Iniciar Sesión Estudiante"
+btnISEstudiante.addEventListener("click", async () => {
+  const usuarioIngresado = emailEstudianteIS.value.trim();
+  const IDIngresado = IDEstudianteIS.value.trim();
+  const contrasenaIngresada = passwordEstudianteIS.value.trim();
+
+  // Obtener Estudiantes desde el JSON server
+  const estudiantes = await getData("estudiantes");
+
+  // Buscar estudiante que coincida con los datos del db.json
+  const estudianteEncontrado = estudiantes.find(
+    (e) =>
+      e.emailEstudianteR === usuarioIngresado &&  
+      e.CedulaEstudiante === IDIngresado &&       
+      e.passwordEstudianteR === contrasenaIngresada 
+  );
+
+  if (estudianteEncontrado) {
+    alert(`✅ Ingreso exitoso. ¡Bienvenido ${estudianteEncontrado.NombreEstudiante} ${estudianteEncontrado.ApellidosEstudiante}!`);
+    localStorage.setItem("idUsuario",estudianteEncontrado.id)
+    localStorage.setItem("cedulaUsuario",estudianteEncontrado.CedulaEstudiante)
+    window.location.href = "../pages/perfilEstudiante.html"; // redirección
+  } else {
+    alert("❌ Usuario o contraseña incorrectos.");
+  }
+});
+
+//----------------------------------------------------------------------------------------------------
+
+
+//Agregar Registro Docente//
+// Referencias a los inputs del formulario de docente
+const Token = document.getElementById('Token');
+const NombreDocente = document.getElementById('NombreDocente');
+const ApellidosDocente = document.getElementById('ApellidosDocente');
+const CedulaDocente = document.getElementById('CedulaDocente');
+const CorreoElectronicoDocenteR = document.getElementById('CorreoElectronicoDocenteR');
+const passwordDocenteR = document.getElementById('input-passwordDocenteR');
+const passwordDocenteRConfirmar = document.getElementById('input-passwordDocenteRConfirmación');
+const telefonoDocente = document.getElementById('telefonoDocente');
+const modalidad = document.getElementById('modalidad');
+const btnCrearCuentaDocente = document.getElementById('btnCrearCuentaDocente');
+
+
+// Función para registrar docente
+async function agregarDocente(e) {
+  e.preventDefault()
+  // Validación de contraseñas
+  if (passwordDocenteR.value !== passwordDocenteRConfirmar.value) {
+    alert("⚠️ Las contraseñas no coinciden");
+    return;
+  }
+
+  // Crear objeto con los datos del docente
+  const nuevoDocente = {
+    Token: Token.value,
+    NombreDocente: NombreDocente.value,
+    ApellidosDocente: ApellidosDocente.value,
+    CedulaDocente: CedulaDocente.value,
+    CorreoElectronicoDocenteR: CorreoElectronicoDocenteR.value,
+    passwordDocenteR: passwordDocenteR.value,
+    telefonoDocente: telefonoDocente.value,
+    modalidad: modalidad.value
+  };
+
+  try {
+    // Llamada a la función que hace POST al db.json
+    const peticion = await postData("docentes", nuevoDocente);
+    console.log("✅ Respuesta del servidor:", peticion);
+    alert("Docente registrado correctamente");
+  } catch (error) {
+    console.error("❌ Error al registrar docente:", error);
+    alert("Error al registrar docente");
+  }
+}
+
+// Evento click del botón
+btnCrearCuentaDocente.addEventListener('click', agregarDocente);
+
+
+// iniciar sesion de docente------------------------------------
+// Inputs del login docente
+const emailDocenteIS = document.getElementById("input-emailDocenteIS");
+const IDDocenteIS = document.getElementById("input-IDDocenteIS");
+const btnISDocente = document.getElementById("btnISDocente");
+
+
+// Evento al hacer clic en "Iniciar Sesión Docente"
+btnISDocente.addEventListener("click", async () => {
+  const usuarioIngresado = emailDocenteIS.value.trim();
+  const contrasenaIngresada = IDDocenteIS.value.trim();
+
+  // Obtener docentes desde el JSON server
+  const docentes = await getData("docentes");
+
+  // Buscar docente que coincida
+  const docenteEncontrado = docentes.find(
+    (d) =>
+      d.CorreoElectronicoDocenteR === usuarioIngresado &&
+      d.passwordDocenteR === contrasenaIngresada
+  );
+
+  if (docenteEncontrado) {
+    alert(`✅ Ingreso exitoso. ¡Bienvenido ${docenteEncontrado.NombreDocente} ${docenteEncontrado.ApellidosDocente}!`);
+    localStorage.setItem("idDocente",docenteEncontrado.id)
+    window.location.href = "../pages/MenuAdmin.html"; // redirección
+  } else {
+    alert("❌ Usuario o contraseña incorrectos.");
+  }
+});

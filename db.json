@@ -1,38 +1,120 @@
 {
   "estudiantes": [
     {
-      "id": "a6fc",
-      "NombreEstudiante": "Alejandro",
+      "id": "360f",
+      "NombreEstudiante": "ale",
       "ApellidosEstudiante": "Machado",
-      "CedulaEstudiante": "23132",
+      "CedulaEstudiante": "12345678",
       "fechaEstudiante": "21/11/1998",
-      "emailEstudianteR": "AML",
+      "emailEstudianteR": "alemachadofwd@gmail.com",
       "passwordEstudianteR": "1234",
       "pregunta1": "a",
       "pregunta2": "b",
-      "pregunta3": "c",
+      "sede": "c",
       "Provincia": "San José",
       "direccionCompleta": "san rafa",
       "telefonoEstudiante": "+50486089212"
     },
     {
-      "id": "4676",
-      "NombreEstudiante": "Chris",
-      "ApellidosEstudiante": "Delgado",
-      "CedulaEstudiante": "11540496",
-      "fechaEstudiante": "29/09/1996",
-      "emailEstudianteR": "cristodh@hotmail.com",
+      "id": "4edf",
+      "NombreEstudiante": "Moli",
+      "ApellidosEstudiante": "Corea Abarca",
+      "CedulaEstudiante": "12345678",
+      "fechaEstudiante": "21/11/1998",
+      "emailEstudianteR": "moli@gmail.com",
       "passwordEstudianteR": "1234",
       "pregunta1": "a",
-      "pregunta2": "a",
-      "pregunta3": "s",
-      "Provincia": "Guanacaste",
-      "direccionCompleta": "as",
-      "telefonoEstudiante": "63007974"
+      "pregunta2": "b",
+      "sede": "c",
+      "Provincia": "San José",
+      "direccionCompleta": "san rafa",
+      "telefonoEstudiante": "+50486089212"
+    },
+    {
+      "id": "4a30",
+      "NombreEstudiante": "Chris",
+      "ApellidosEstudiante": "Delgado",
+      "CedulaEstudiante": "12345678",
+      "fechaEstudiante": "21/11/1998",
+      "emailEstudianteR": "chris@gmail.com",
+      "passwordEstudianteR": "1234",
+      "pregunta1": "a",
+      "pregunta2": "b",
+      "sede": "LaCapri",
+      "Provincia": "",
+      "direccionCompleta": "tibas",
+      "telefonoEstudiante": "+50486089212"
     }
   ],
-  "docentes": [],
+  "docentes": [
+    {
+      "id": "ca68",
+      "Token": "j889",
+      "NombreDocente": "Jeank",
+      "ApellidosDocente": "Barberena",
+      "CedulaDocente": "12345678",
+      "CorreoElectronicoDocenteR": "jeanca@gmail.com",
+      "passwordDocenteR": "1234",
+      "telefonoDocente": "+50484153769",
+      "modalidad": "presencial"
+    }
+  ],
   "cpu": [],
+  "solicitudes": [
+    {
+      "id": "5c19",
+      "nombreSolicitante": "Chris",
+      "cedulaSolicitante": "116540496",
+      "correoSolicitante": "chris@gmail.com",
+      "sedeSolicitante": "capri",
+      "fechaSalida": "2025-09-01",
+      "fechaEntrega": "2025-09-10",
+      "cpu": "jdaskdaskdnja"
+    },
+    {
+      "id": "1af0",
+      "nombreSolicitante": "Moli Corea Abarca",
+      "cedulaSolicitante": "12345678",
+      "correoSolicitante": "moli@gmail.com",
+      "sedeSolicitante": "La Capri",
+      "fechaSalida": "2025-09-01",
+      "fechaEntrega": "2025-09-02",
+      "cpu": "undefined",
+      "estado": "pendiente"
+    },
+    {
+      "id": "a779",
+      "nombreSolicitante": "Moli Corea Abarca",
+      "cedulaSolicitante": "12345678",
+      "correoSolicitante": "moli@gmail.com",
+      "sedeSolicitante": "cDASDA",
+      "fechaSalida": "2025-09-02",
+      "fechaEntrega": "2025-09-26",
+      "cpu": "undefined"
+    },
+    {
+      "id": "3b8d",
+      "nombreSolicitante": "Moli Corea Abarca",
+      "cedulaSolicitante": "12345678",
+      "correoSolicitante": "moli@gmail.com",
+      "sedeSolicitante": "c",
+      "fechaSalida": "2025-09-01",
+      "fechaEntrega": "2025-09-07",
+      "cpu": "undefined",
+      "estado": "En revisión"
+    },
+    {
+      "id": "31ec",
+      "nombreSolicitante": "Moli Corea Abarca",
+      "cedulaSolicitante": "12345678",
+      "correoSolicitante": "moli@gmail.com",
+      "sedeSolicitante": "c",
+      "fechaSalida": "2025-09-01",
+      "fechaEntrega": "2025-09-02",
+      "cpu": "undefined",
+      "estado": "En revisión"
+    }
+  ],
   "admins": [
     {
       "usuario": "AML",
