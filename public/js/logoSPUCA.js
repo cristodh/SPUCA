@@ -5,6 +5,6 @@ logo.addEventListener("click", () => {
 
   // Esperar a que termine la animación (1s) y redirigir
   setTimeout(() => {
-    window.location.href = "Registro.html"; // 🔗 Cambia a tu página
+    window.location.href = "../pages/Registro.html"; // 🔗 Cambia a tu página
   }, 1000);
 });

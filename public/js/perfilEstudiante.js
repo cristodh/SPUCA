@@ -9,9 +9,11 @@ const sede = document.getElementById("sede");
 
 async function traerInfoEstudiante() {
     const datosEstudiate = await getData ('estudiantes')
-    const estudianteFiltrado = datosEstudiate.filter((estudiante) => estudiante.id === '4676') 
+    const estudianteFiltrado = datosEstudiate.filter((estudiante) => estudiante.id === localStorage.getItem("idUsuario")) 
     nombreEstudiante.textContent = estudianteFiltrado[0].NombreEstudiante
     correo.textContent = estudianteFiltrado[0].emailEstudianteR
+    numeroC.textContent = estudianteFiltrado[0].CedulaEstudiante
+    sede.textContent = estudianteFiltrado[0].sede
     console.log(estudianteFiltrado[0].NombreEstudiante)
 }
 traerInfoEstudiante()

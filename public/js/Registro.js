@@ -114,7 +114,7 @@ botonAdmin.addEventListener("click", () => {
 
 //registro estudiante
 
-import { postData } from "../services/fetch2.js";
+import { getData, postData } from "../services/fetch2.js";
 
 const NombreEstudiante = document.getElementById('NombreEstudiante');
 const ApellidosEstudiante = document.getElementById('ApellidosEstudiante');
@@ -125,7 +125,7 @@ const passwordEstudianteR = document.getElementById('passwordEstudianteR');
 const passwordEstudianteRConfirmar = document.getElementById('passwordEstudianteRConfirmar');
 const pregunta1 = document.getElementById("pregunta1");
 const pregunta2 = document.getElementById("pregunta2");
-const pregunta3 = document.getElementById("pregunta3");
+const sede = document.getElementById("sede");
 const Provincia = document.getElementById("Provincia");
 const direccionCompleta = document.getElementById("direccionCompleta");
 const telefonoEstudiante = document.getElementById("telefonoEstudiante");
@@ -148,7 +148,7 @@ async function agregarEstudiante(e) {
     passwordEstudianteR: passwordEstudianteR.value,
     pregunta1: pregunta1.value,
     pregunta2: pregunta2.value,
-    pregunta3: pregunta3.value,
+    sede: sede.value,
     Provincia: Provincia.value,
     direccionCompleta: direccionCompleta.value,
     telefonoEstudiante: telefonoEstudiante.value
@@ -175,18 +175,6 @@ const IDEstudianteIS = document.getElementById("input-IDEstudianteIS");
 const passwordEstudianteIS = document.getElementById("input-passwordEstudianteIS");
 const btnISEstudiante = document.getElementById("btnISEstudiante");
 
-// Función para obtener Estudiantes del backend
-async function getEstudiantes() {
-  try {
-    const peticion = await fetch("http://localhost:2929/estudiantes");
-    const data = await peticion.json();
-    return data; // debe ser un array de estudiantes
-  } catch (error) {
-    console.error("❌ Error al obtener estudiantes:", error);
-    return [];
-  }
-}
-
 // Evento al hacer clic en "Iniciar Sesión Estudiante"
 btnISEstudiante.addEventListener("click", async () => {
   const usuarioIngresado = emailEstudianteIS.value.trim();
@@ -194,18 +182,19 @@ btnISEstudiante.addEventListener("click", async () => {
   const contrasenaIngresada = passwordEstudianteIS.value.trim();
 
   // Obtener Estudiantes desde el JSON server
-  const estudiantes = await getEstudiantes();
+  const estudiantes = await getData("estudiantes");
 
   // Buscar estudiante que coincida con los datos del db.json
   const estudianteEncontrado = estudiantes.find(
     (e) =>
-      e.email === usuarioIngresado &&   // 👈 aquí pon el nombre REAL en tu db.json
-      e.cedula === IDIngresado &&       // 👈 aquí pon el nombre REAL en tu db.json
-      e.password === contrasenaIngresada // 👈 aquí pon el nombre REAL en tu db.json
+      e.emailEstudianteR === usuarioIngresado &&  
+      e.CedulaEstudiante === IDIngresado &&       
+      e.passwordEstudianteR === contrasenaIngresada 
   );
 
   if (estudianteEncontrado) {
-    alert(`✅ Ingreso exitoso. ¡Bienvenido ${estudianteEncontrado.nombre} ${estudianteEncontrado.apellidos}!`);
+    alert(`✅ Ingreso exitoso. ¡Bienvenido ${estudianteEncontrado.NombreEstudiante} ${estudianteEncontrado.ApellidosEstudiante}!`);
+    localStorage.setItem("idUsuario",estudianteEncontrado.id)
     window.location.href = "../pages/perfilEstudiante.html"; // redirección
   } else {
     alert("❌ Usuario o contraseña incorrectos.");
