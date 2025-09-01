@@ -1,7 +1,22 @@
 {
   "estudiantes": [
     {
-      "id": "09b1",
+      "id": "360f",
+      "NombreEstudiante": "ale",
+      "ApellidosEstudiante": "Machado",
+      "CedulaEstudiante": "12345678",
+      "fechaEstudiante": "21/11/1998",
+      "emailEstudianteR": "alemachadofwd@gmail.com",
+      "passwordEstudianteR": "1234",
+      "pregunta1": "a",
+      "pregunta2": "b",
+      "pregunta3": "c",
+      "Provincia": "San José",
+      "direccionCompleta": "san rafa",
+      "telefonoEstudiante": "+50486089212"
+    },
+    {
+      "id": "4edf",
       "NombreEstudiante": "Alejandro",
       "ApellidosEstudiante": "Machado",
       "CedulaEstudiante": "117270841",
@@ -16,7 +31,19 @@
       "telefonoEstudiante": "+50486089212"
     }
   ],
-  "docentes": [],
+  "docentes": [
+    {
+      "id": "ca68",
+      "Token": "j889",
+      "NombreDocente": "Jeank",
+      "ApellidosDocente": "Barberena",
+      "CedulaDocente": "12345678",
+      "CorreoElectronicoDocenteR": "jkmachadofwd@gmail.com",
+      "passwordDocenteR": "1234",
+      "telefonoDocente": "+50484153769",
+      "modalidad": "presencial"
+    }
+  ],
   "cpu": [],
   "admins": [
     {
