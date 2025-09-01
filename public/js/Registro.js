@@ -1,3 +1,4 @@
+//----------------------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
   // Pestañas
   const linkEst = document.getElementById("linkEstudiante");
@@ -111,8 +112,9 @@ botonAdmin.addEventListener("click", () => {
     alert("Usuario o contraseña incorrectos.");
   }
 });
+//----------------------------------------------------------------------------------------------------------------
 
-//registro estudiante
+//registro estudiantes
 
 import { getData, postData } from "../services/fetch2.js";
 
@@ -131,6 +133,7 @@ const direccionCompleta = document.getElementById("direccionCompleta");
 const telefonoEstudiante = document.getElementById("telefonoEstudiante");
 const btnCrearEstudiante = document.getElementById("btnCrearEstudiante");
 
+//enviar info al DB.json
 async function agregarEstudiante(e) {
   e.preventDefault()
   // Validación rápida de contraseñas
@@ -165,8 +168,7 @@ async function agregarEstudiante(e) {
 }
 btnCrearEstudiante.addEventListener('click', agregarEstudiante);
 
-// iniciar sesion de ESTUDIANTE------------------------------------
-// Inputs del login ESTUDIANTE
+
 
 // iniciar sesión de ESTUDIANTE ------------------------------------
 // Inputs del login ESTUDIANTE
@@ -201,7 +203,7 @@ btnISEstudiante.addEventListener("click", async () => {
   }
 });
 
-
+//----------------------------------------------------------------------------------------------------
 
 
 //Agregar Registro Docente//
@@ -240,7 +242,7 @@ async function agregarDocente(e) {
   };
 
   try {
-    // Llamada a la función que hace POST al backend
+    // Llamada a la función que hace POST al db.json
     const peticion = await postData("docentes", nuevoDocente);
     console.log("✅ Respuesta del servidor:", peticion);
     alert("Docente registrado correctamente");
@@ -260,17 +262,6 @@ const emailDocenteIS = document.getElementById("input-emailDocenteIS");
 const IDDocenteIS = document.getElementById("input-IDDocenteIS");
 const btnISDocente = document.getElementById("btnISDocente");
 
-// Función para obtener docentes del backend
-async function getDocentes() {
-  try {
-    const peticion = await fetch("http://localhost:2929/docentes"); // 👈 asegúrate que esta ruta exista en tu db.json
-    const data = await peticion.json();
-    return data; // debe ser un array de docentes
-  } catch (error) {
-    console.error("❌ Error al obtener docentes:", error);
-    return [];
-  }
-}
 
 // Evento al hacer clic en "Iniciar Sesión Docente"
 btnISDocente.addEventListener("click", async () => {
@@ -278,7 +269,7 @@ btnISDocente.addEventListener("click", async () => {
   const contrasenaIngresada = IDDocenteIS.value.trim();
 
   // Obtener docentes desde el JSON server
-  const docentes = await getDocentes();
+  const docentes = await getData("docentes");
 
   // Buscar docente que coincida
   const docenteEncontrado = docentes.find(
@@ -289,6 +280,7 @@ btnISDocente.addEventListener("click", async () => {
 
   if (docenteEncontrado) {
     alert(`✅ Ingreso exitoso. ¡Bienvenido ${docenteEncontrado.NombreDocente} ${docenteEncontrado.ApellidosDocente}!`);
+    localStorage.setItem("idDocente",docenteEncontrado.id)
     window.location.href = "../pages/MenuAdmin.html"; // redirección
   } else {
     alert("❌ Usuario o contraseña incorrectos.");
