@@ -102,6 +102,17 @@
       "fechaEntrega": "2025-09-07",
       "cpu": "undefined",
       "estado": "En revisión"
+    },
+    {
+      "id": "31ec",
+      "nombreSolicitante": "Moli Corea Abarca",
+      "cedulaSolicitante": "12345678",
+      "correoSolicitante": "moli@gmail.com",
+      "sedeSolicitante": "c",
+      "fechaSalida": "2025-09-01",
+      "fechaEntrega": "2025-09-02",
+      "cpu": "undefined",
+      "estado": "En revisión"
     }
   ],
   "admins": [

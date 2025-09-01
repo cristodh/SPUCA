@@ -114,13 +114,14 @@ header {
     border-radius: 16px;
     box-shadow: -7px 42px 52px 20px rgba(0,0,0,0.1);
     overflow: hidden;
-    /* oculta la portada redondeada */
     text-align: center;
     animation: fadeInUp .8s ease-out;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: -200px;
+    height: 820px;
+    max-height: 900px;
 }
 
 
@@ -160,13 +161,16 @@ header {
 
 /* ===== Columna Derecha (tabs + tarjetas) ===== */
 .columnaD {
-    background-color: rgb(30, 30, 30 / 20%);
-    backdrop-filter: blur(10px);
+    background-color: white;
+    height: 575px;
+    max-height: 575px;
+    width: 800px;
     padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    border-radius: 25px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.279);
     display: flex;
-    flex-direction: column;
+    flex-direction: column ;
+    overflow: scroll;
 }
 
 /* Tabs */
