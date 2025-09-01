@@ -197,6 +197,7 @@ btnISEstudiante.addEventListener("click", async () => {
   if (estudianteEncontrado) {
     alert(`✅ Ingreso exitoso. ¡Bienvenido ${estudianteEncontrado.NombreEstudiante} ${estudianteEncontrado.ApellidosEstudiante}!`);
     localStorage.setItem("idUsuario",estudianteEncontrado.id)
+    localStorage.setItem("cedulaUsuario",estudianteEncontrado.CedulaEstudiante)
     window.location.href = "../pages/perfilEstudiante.html"; // redirección
   } else {
     alert("❌ Usuario o contraseña incorrectos.");
