@@ -17,20 +17,3 @@ async function traerInfoDocente() {
 }
 traerInfoDocente()
 
-
-//autorelleno de info
-async function rellenarInfo() {
-    const datosEstudiate = await getData ('estudiantes')
-    const estudianteFiltrado = datosEstudiate.filter((estudiante) => estudiante.id === localStorage.getItem("idUsuario"))
-    
-    nombreC.value = estudianteFiltrado[0].NombreEstudiante +" "+ estudianteFiltrado[0].ApellidosEstudiante
-    numeCe.value = estudianteFiltrado[0].CedulaEstudiante
-    correo.value = estudianteFiltrado[0].emailEstudianteR
-    sede.value = estudianteFiltrado[0].sede
-    cpuAsignada.value = estudianteFiltrado[0].cpuAsignada
-    console.log(estudianteFiltrado[0].NombreEstudiante)
-}
-rellenarInfo()
-
-
-
