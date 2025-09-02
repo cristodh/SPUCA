@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estadísticas de Solicitudes</title>
+  <link rel="stylesheet" href="../pruebas/canva.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <h1>Registro de Solicitudes</h1>
+
+  <!-- Formulario -->
+  <div class="infoPersonal">
+    <label for="nombreC">Nombre completo</label>
+    <input type="text" id="nombreC" placeholder="Nombre completo"><br>
+
+    <label for="numeCe">Número de cédula</label>
+    <input type="text" id="numeCe" placeholder="0-0000-0000" maxlength="12"><br>
+
+    <label for="correo">Correo Electrónico</label>
+    <input type="email" id="correo" placeholder="Correo Electrónico"><br>
+
+    <label for="sede">Sede</label>
+    <select id="sede"> 
+      <option value="capri">La Capri</option>
+      <option value="puntarenas">Puntarenas</option>
+      <option value="virtual">Virtual</option>
+    </select> <br>
+
+    <label for="fechaSa">Fecha de Salida</label>
+    <input type="date" id="fechaSa"><br>
+
+    <label for="fechaEn">Fecha de Entrega</label>
+    <input type="date" id="fechaEn"><br>
+
+    <label for="modeloPc">Modelo de la PC</label>
+    <input type="text" id="modeloPc" placeholder="Modelo de PC"><br>
+
+    <button id="agregar">Agregar Solicitud</button>
+  </div>
+
+  <!-- Controles -->
+  <div class="controls">
+    <select id="tipoGrafico">
+      <option value="pie">Gráfico de Pie</option>
+      <option value="bar">Gráfico de Barras</option>
+      <option value="line">Gráfico Lineal</option>
+    </select>
+    <button id="imprimir">Imprimir PDF y Reiniciar</button>
+  </div>
+
+  <!-- Canvas de gráficas -->
+  <canvas id="grafico" width="600" height="400"></canvas>
+
+  <!-- Contadores -->
+  <div class="estadisticas">
+    <p>Total solicitudes: <span id="total">0</span></p>
+    <p>Aceptadas: <span id="aceptadas">0</span></p>
+    <p>Canceladas: <span id="canceladas">0</span></p>
+  </div>
+
+  <!-- Botones extra -->
+  <div class="acciones">
+    <button id="aceptar">Aceptar Solicitud</button>
+    <button id="cancelar">Cancelar Solicitud</button>
+  </div>
+
+  <script src="../pruebas/canva.js"></script>
+</body>
+</html>

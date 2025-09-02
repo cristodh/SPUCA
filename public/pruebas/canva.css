@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f6fafd;
+  margin: 0;
+  padding: 20px;
+  color: #1a3d63;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.infoPersonal {
+  background: #b3cfe5;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.infoPersonal label {
+  display: block;
+  margin-top: 10px;
+}
+
+.infoPersonal input,
+.infoPersonal select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #4a7fa7;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #1a3d63;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #0a1931;
+}
+
+.controls, .acciones {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.estadisticas {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  background: white;
+  border: 2px solid #4a7fa7;
+  border-radius: 10px;
+}

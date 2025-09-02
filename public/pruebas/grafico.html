@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Canvas Charts – Vanilla JS</title>
+<link rel="stylesheet" href="grafico.css">
+</head>
+<body>
+<section class="card">
+    <header class="header">
+      <div>
+        <div class="title">Dashboard de Ventas</div>
+        <div class="subtitle">Animado · Responsive · Canvas 2D</div>
+      </div>
+      <div class="controls">
+        <button id="barBtn" class="primary">Barras</button>
+        <button id="lineBtn">Gráfico Lineal</button>
+        <button id="circularBtn">Gráfico Circular</button>
+        <button id="ActualizarBtn" class="warn">Actualizar datos</button>
+      </div>
+
+    </header>
+    <div class="canvas-wrap">
+      <canvas id="chart"></canvas>
+    </div>
+    <div id="legend" class="legend"></div>
+</section>
+<script type="module" src="grafico.js"></script>
+</body>
+</html>
