@@ -135,6 +135,39 @@
       "fechaEntrega": "2025-09-05",
       "cpu": "undefined",
       "estado": "En revisión"
+    },
+    {
+      "id": "98d9",
+      "nombreSolicitante": "Moli Corea Abarca",
+      "cedulaSolicitante": "12345678",
+      "correoSolicitante": "moli@gmail.com",
+      "sedeSolicitante": "c",
+      "fechaSalida": "2025-09-05",
+      "fechaEntrega": "2025-09-07",
+      "cpu": "undefined",
+      "estado": "En revisión"
+    },
+    {
+      "id": "f1b9",
+      "nombreSolicitante": "Moli Corea Abarca",
+      "cedulaSolicitante": "12345678",
+      "correoSolicitante": "moli@gmail.com",
+      "sedeSolicitante": "c",
+      "fechaSalida": "2025-09-02",
+      "fechaEntrega": "2025-09-04",
+      "cpu": "undefined",
+      "estado": "En revisión"
+    },
+    {
+      "id": "61ed",
+      "nombreSolicitante": "Moli Corea Abarca",
+      "cedulaSolicitante": "12345678",
+      "correoSolicitante": "moli@gmail.com",
+      "sedeSolicitante": "c",
+      "fechaSalida": "2025-09-02",
+      "fechaEntrega": "2025-09-03",
+      "cpu": "undefined",
+      "estado": "En revisión"
     }
   ],
   "admins": [

@@ -1,8 +1,8 @@
 body {
     margin: 0;
     background:
-        linear-gradient(to right, #1b1e27, #1b1e27, #1f212893, rgba(0, 0, 0, 0)),
-        url("../imgs/laptop dia.jpg");
+    linear-gradient(to right, #1b1e27, #1b1e27, #1f212893, rgba(0, 0, 0, 0)),
+    url("../imgs/laptop dia.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
@@ -159,7 +159,6 @@ select,
 textarea {
     font-size: 16px;
     width: 380px;
-    /* tamaño original */
     padding: 12px;
     margin-top: 15px;
     margin-bottom: 10px;

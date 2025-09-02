@@ -113,27 +113,26 @@ header {
 .columnaI {
     background-color: rgb(255 255 255 / 80%);
     backdrop-filter: blur(10px);
-    border-radius: 16px;
+    border-radius: 5px;
     box-shadow: -7px 42px 52px 20px rgba(0,0,0,0.2);
     overflow: hidden;
-    /* oculta la portada redondeada */
     text-align: center;
     animation: fadeInUp .8s ease-out;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: -200px;
+    height: 775px;
+    max-height: 775px;
 }
 
 
 
-/* Foto de perfil superpuesta */
+/* Foto de perfil */
 #imagenPerfil {
     width: 140px;
     height: 140px;
     border-radius: 50%;
-    border: 5px solid #ffffff;
-    background: #A8E8F9;
     object-fit: cover;
     margin-top: 50px;
 }
@@ -163,16 +162,16 @@ header {
     background-color: rgb(30, 30, 30 / 20%);
     backdrop-filter: blur(10px);
     padding: 20px;
-    border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-    overflow: scroll;
-=======
-    margin-top: -50px
-    
->>>>>>> c4feffcb52020622236206ff94301e6b433ea2f1
+    margin-top: -50px;
+    height: 585px;
+    overflow-y: scroll;
+    scrollbar-color: auto;
+    scrollbar-color: #51a4fd #ffffff;
+    border-radius: 5px;
+    max-height: 585px;
 }
 
 /* Tabs */
@@ -251,8 +250,6 @@ header {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
-    background: #ffffff;
-    border: 2px solid #00537A;
 }
 
 /*boton de nuevo formulario*/
