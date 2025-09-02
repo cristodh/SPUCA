@@ -59,11 +59,6 @@ traerInfoEstudiante()
 
 
 
-// <div class="info-solicitud">
-//                             <img src="../imgs/chico.png" class="foto-usuario">
-//                             <p><strong>Nombre:</strong> Juan Pérez</p>
-//                             <p><strong>Fecha:</strong> 2025-08-27</p>
-//                             <p><strong>Estado:</strong> Pendiente</p>
-//                         </div>
+
 
 
