@@ -173,7 +173,7 @@ const legendEl=document.getElementById("legend");
 const barBtn=document.getElementById("barBtn");
 const lineBtn=document.getElementById("lineBtn");
 const randomBtn=document.getElementById("randomBtn");
-let labels=["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Set","Oct","Nov", "Dic"];
+let labels=["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago"];
 let datasets=[
   {label:"Ingresos", data:[120,180,150,220,260,240,300,280], color:COLORS[0]},
   {label:"Costos",   data:[80,110,100,140,160,150,190,170], color:COLORS[2]},

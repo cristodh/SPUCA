@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="graficoReal.css">
+  <title>Document</title>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+  <!-- Filtros de estadísticas -->
+  <div class="card">
+    <div class="header">
+      <div>
+        <div class="title">📊 Ver estadísticas</div>
+        <div class="subtitle">Selecciona rango y tipo de gráfico</div>
+      </div>
+      <div class="controls">
+        <label>Rango de tiempo: </label>
+        <select id="rango" onchange="actualizarGraficos()">
+          <option value="dia">Por Día</option>
+          <option value="semana">Por Semana</option>
+          <option value="mes">Por Mes</option>
+          <option value="anio">Por Año</option>
+        </select>
+
+        <label>Tipo de gráfico: </label>
+        <select id="tipoGrafico" onchange="actualizarGraficos()">
+          <option value="lineal">Lineal</option>
+          <option value="barras">Barras</option>
+          <option value="pie">Circular (Pie)</option>
+          <option value="dona">Dona</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Contenedor de gráficos -->
+    <div class="canvas-wrap">
+      <canvas id="chart"></canvas>
+    </div>
+  </div>
+
+  <script src="../pruebas/graficoReal.js"></script>
+</body>
+</html>

@@ -12,7 +12,6 @@ async function postData(endpoint,obj) {
     console.error('Error:', error);
   }
 }
-
 async function getData(endpoint) {
   try {
     const peticion = await fetch(`http://localhost:2929/${endpoint}`);
@@ -21,22 +20,34 @@ async function getData(endpoint) {
     console.error('Error:', error);
   }
 }
-
-async function patchData(endpoint, obj) {
+async function patchData(endpoint, obj,id) {
   try {
-    const peticion = await fetch(`http://localhost:2929/${endpoint}`, {
+    const peticion = await fetch(`http://localhost:2929/${endpoint}/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(obj)
+      body: JSON.stringify(obj) // pasa info al db.json **api
     });
     return await peticion.json();
   } catch (error) {
     console.error('Error:', error);
   }
 }
-
-
-export {postData,getData,patchData}
+async function delData(endpoint,id) {
+ try {
+   const peticion = await fetch (`http://localhost:2929/${endpoint}/${id}`, {
+     method: "delete",
+     headers:{
+       "Content-type": "application/json"
+     }
+   });
+   const respuesta = await peticion.json()
+   console.log(respuesta);
+   return respuesta
+ } catch (error) {
+  console.error(error);
+ }
+}
+export {postData,getData,patchData,delData}
 

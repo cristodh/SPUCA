@@ -62,57 +62,15 @@
   "cpu": [],
   "solicitudes": [
     {
-      "id": "5c19",
-      "nombreSolicitante": "Chris",
-      "cedulaSolicitante": "116540496",
-      "correoSolicitante": "chris@gmail.com",
-      "sedeSolicitante": "capri",
-      "fechaSalida": "2025-09-01",
-      "fechaEntrega": "2025-09-10",
-      "cpu": "jdaskdaskdnja"
-    },
-    {
-      "id": "1af0",
-      "nombreSolicitante": "Moli Corea Abarca",
+      "id": "e594",
+      "nombreSolicitante": "ale Machado",
       "cedulaSolicitante": "12345678",
-      "correoSolicitante": "moli@gmail.com",
-      "sedeSolicitante": "La Capri",
-      "fechaSalida": "2025-09-01",
-      "fechaEntrega": "2025-09-02",
-      "cpu": "undefined",
-      "estado": "pendiente"
-    },
-    {
-      "id": "a779",
-      "nombreSolicitante": "Moli Corea Abarca",
-      "cedulaSolicitante": "12345678",
-      "correoSolicitante": "moli@gmail.com",
-      "sedeSolicitante": "cDASDA",
+      "correoSolicitante": "alemachadofwd@gmail.com",
+      "sedeSolicitante": "c",
       "fechaSalida": "2025-09-02",
       "fechaEntrega": "2025-09-26",
-      "cpu": "undefined"
-    },
-    {
-      "id": "3b8d",
-      "nombreSolicitante": "Moli Corea Abarca",
-      "cedulaSolicitante": "12345678",
-      "correoSolicitante": "moli@gmail.com",
-      "sedeSolicitante": "c",
-      "fechaSalida": "2025-09-01",
-      "fechaEntrega": "2025-09-07",
       "cpu": "undefined",
-      "estado": "En revisión"
-    },
-    {
-      "id": "31ec",
-      "nombreSolicitante": "Moli Corea Abarca",
-      "cedulaSolicitante": "12345678",
-      "correoSolicitante": "moli@gmail.com",
-      "sedeSolicitante": "c",
-      "fechaSalida": "2025-09-01",
-      "fechaEntrega": "2025-09-02",
-      "cpu": "undefined",
-      "estado": "En revisión"
+      "estado": "Aceptado"
     }
   ],
   "admins": [
