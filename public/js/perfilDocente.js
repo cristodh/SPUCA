@@ -11,7 +11,7 @@ btnLogout.addEventListener("click", () => {
     window.location.href = "../pages/logoSPUCA.html";
 });
 
-
+/*Función para mostrar la información del docente*/
 async function traerInfoDocente() {
     const datosDocentes = await getData('docentes')
     const docenteFiltrado = datosDocentes.filter((docente) => docente.id === localStorage.getItem("idDocente"))
@@ -21,7 +21,7 @@ async function traerInfoDocente() {
     console.log(docenteFiltrado[0].nombreDocente)
 }
 traerInfoDocente()
-
+/* Función para mostrar las solicitudes en el perfil del docente*/
 async function estructuraSolicitudes() {
     const solicitudes = await getData('solicitudes');
     solicitudes.forEach((soli) => {
@@ -35,7 +35,7 @@ async function estructuraSolicitudes() {
         btnEliminar.textContent = "ELIMINAR"
         //imagenPerfil
         const imgUsuario = document.createElement('img')
-        imgUsuario.setAttribute('src', '../imgs/chico.png')
+        imgUsuario.setAttribute('src','../imgs/emoji (1).png')
         imgUsuario.classList.add('foto-usuario')
 
         //nombre

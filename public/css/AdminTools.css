@@ -46,6 +46,13 @@ main {
   color: #1da1f2;
 }
 
+.card select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccd6dd;
+  border-radius: 8px;
+}
 .card input {
   width: 100%;
   padding: 10px;
@@ -53,7 +60,6 @@ main {
   border: 1px solid #ccd6dd;
   border-radius: 8px;
 }
-
 .card button {
   background: #1da1f2;
   color: white;

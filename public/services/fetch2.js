@@ -20,6 +20,10 @@ async function getData(endpoint) {
     console.error('Error:', error);
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> b63af16775f64cb3079d097b693a7c1e7cb75ca8
 async function patchData(endpoint, obj,id) {
   try {
     const peticion = await fetch(`http://localhost:2929/${endpoint}/${id}`, {

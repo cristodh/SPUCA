@@ -15,8 +15,12 @@
     <!-- Asignación de CPUs -->
     <div class="card">
       <h2>Asignación de CPUs</h2>
-      <input id="studentName" type="text" placeholder="Nombre de Estudiante">
-      <input id="serialNumber" type="text" placeholder="Número de Serie">
+      <select id="estudiantes">
+        <option value="" disabled selected>Seleccione un estudiante</option>
+      </select>
+      <select id="numerosSerie">
+        <option value="" disabled selected>Seleccione un número de serie</option>
+      </select>
       <button id="btnAsignar">Asignar</button>
     </div>
     
@@ -26,14 +30,21 @@
       <h2>Asignación Tokens</h2>
       <input id="profName" type="text" placeholder="Nombre del Profesor">
       <input id="token" type="text" placeholder="Token">
-      <button onclick="assignToken()">Asignar</button>
+      <button>Asignar</button>
     </div>
 
     <!-- Eliminación Usuario -->
     <div class="card">
-      <h2>Eliminación Usuario</h2>
-      <input id="deleteName" type="text" placeholder="Nombre del Profesor o Estudiante">
-      <button onclick="deleteUser()">Procesar</button>
+      <h2>Eliminación Docentes</h2>
+      <select id="deleteName" type="text" placeholder="Nombre del Profesor o Estudiante">
+        <option disabled selected value="">Seleccione el profesor a eliminar</option>
+      </select>
+      <button id="deleteDocente">Eliminar docente</button>
+      <h2>Eliminación Estudiantes</h2>
+      <select id="deleteEstudiantes" type="text" placeholder="Nombre del Profesor o Estudiante">
+        <option disabled selected value="">Seleccione estudiante a eliminar</option>
+      </select>
+      <button id="deleteEstudiante">Eliminar estudiante</button>
     </div>
   </main>
 
@@ -41,7 +52,7 @@
   <div class="card">
     <h2>Ingreso nuevas computadoras</h2>
     <input id="newSerial" type="text" placeholder="Número de Serie">
-    <button onclick="addComputer()">Agregar</button>
+    <button id="btnAgregar">Agregar</button>
   </div>
 
 

@@ -8,6 +8,14 @@ const cpuAsignada = document.getElementById("cpuAsignada");
 const solicitud = document.getElementById("solicitud");
 const btnLogout = document.getElementById("logout");
 
+
+/* Botón de log out */
+document.addEventListener('DOMContentLoaded',function(){
+    if (!localStorage.getItem('idUsuario')) {
+        window.location.href = '../pages/registro.html'
+    }
+})
+
 btnLogout.addEventListener("click", () => {
   localStorage.clear();
   window.location.href = "../pages/logoSPUCA.html";
@@ -22,7 +30,7 @@ async function traerInfoEstudiante() {
     correo.textContent = estudianteFiltrado[0].emailEstudianteR
     numeroC.textContent = estudianteFiltrado[0].CedulaEstudiante
     sede.textContent = estudianteFiltrado[0].sede
-    cpuAsignada.textContent = estudianteFiltrado[0].cpuAsignada
+    cpuAsignada.textContent = estudianteFiltrado[0].serial
     console.log(estudianteFiltrado[0].NombreEstudiante)
 }
 async function estructuraSolicitudes() {
@@ -36,7 +44,7 @@ async function estructuraSolicitudes() {
 
         //imagenPerfil
         const imgUsuario = document.createElement('img')
-        imgUsuario.setAttribute('src','../imgs/chico.png')
+        imgUsuario.setAttribute('src','../imgs/emoji (1).png')
         imgUsuario.classList.add('foto-usuario')
 
         //nombre
