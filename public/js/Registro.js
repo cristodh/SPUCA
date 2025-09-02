@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   btnCrearEst.addEventListener("click", () => {
     document.body.style.background =
-      'linear-gradient(to right, #1b1e27, #1b1e27, #1f212893, rgba(0, 0, 0, 0)), url("../imgs/computadoras.jpg")';
+      'linear-gradient(to right, #1b1e27, #1b1e27, #1f212893, rgba(0, 0, 0, 0)), url("../imgs/regisEst.jpg")position=fixed'
     loginEst.style.display = "none";
     formEst.style.display = "block";
   });

@@ -1,14 +1,13 @@
 body {
     margin: 0;
     background:
-    linear-gradient(to right, #1b1e27, #1b1e27, #1f212893, rgba(0, 0, 0, 0)),
-    url("../imgs/laptop dia.jpg");
+        linear-gradient(to right, #1B1E27, #1B1E27, #1f212893, rgba(0, 0, 0, 0)),
+        url("../imgs/laptop dia.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
     font-family: 'Segoe UI', sans-serif;
 }
-
 /* Logo */
 .logo {
     width: 250px;
@@ -21,7 +20,6 @@ body {
     margin-top: 10px;
     margin-left: 10px;
 }
-
 /* Barra superior */
 .RegistroTitulo {
     font-size: 50px;
@@ -31,7 +29,6 @@ body {
     display: flex;
     align-items: center;
 }
-
 /* Contenedor principal */
 .contenedor2 {
     margin-top: 200px;
@@ -41,7 +38,6 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
 }
-
 /* Navegación */
 .nav {
     position: absolute;
@@ -52,7 +48,6 @@ body {
     align-items: center;
     color: #fff;
 }
-
 .nav-links {
     font-size: 25px;
     display: flex;
@@ -64,7 +59,6 @@ body {
     margin-left: 200px;
     margin-top: 40px;
 }
-
 /* Pestañas Estudiante/Docente */
 .nav li {
     display: inline;
@@ -73,108 +67,95 @@ body {
     border-radius: 8px;
     transition: 0.3s;
 }
-
 .nav li:hover {
     background: rgba(255, 255, 255, 0.1);
 }
-
 .nav li.activo {
-    background: #007bff;
+    background: #007BFF;
 }
-
 /* Caja de login */
 #RegistroEstudianteOptions,
 #RegistroDocenteOptions,
 #RegistroAdministradorOptions {
-    background: #1f2128;
+    background: #1F2128;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     width: 400px;
 }
-
 /* Formularios ocultos */
 #RegistroEstudianteFormularioOculto,
 #RegistroDocenteFormularioOculto {
-    background: #1f2128;
+    background: #1F2128;
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     width: 400px;
     display: none;
 }
-
 /* Títulos */
 h1 {
     margin-top: 10px;
     font-size: 30px;
     color: white;
 }
-
 h2 {
     font-size: 20px;
     margin-bottom: 1rem;
     color: white;
 }
-
 /* Botón atrás */
 #bntAtras,
 #bntAtras2 {
     width: 125px;
     padding: 12px;
-    background: #007bff;
+    background: #007BFF;
     border-radius: 50px;
     margin-bottom: 12px;
     cursor: pointer;
 }
-
 #bntAtras:hover,
 #bntAtras2:hover {
-    background: #0056b3;
+    background: #0056B3;
 }
-
 #RegistroDocenteFormularioOculto {
     position: relative;
     bottom: 0vh;
     left: 1vw;
     ;
 }
-
 #Docente {
     position: relative;
     bottom: 30vh;
     left: 14vw;
 }
-
 #Administrador {
     position: relative;
     bottom: 30vh;
     left: 14vw;
     background-size: cover;
 }
-
 /* Inputs */
 input,
 select,
 textarea {
     font-size: 16px;
     width: 380px;
+    /* tamaño original */
     padding: 12px;
     margin-top: 15px;
     margin-bottom: 10px;
     border-radius: 10px;
     border: none;
     outline: none;
-    background: #2a2d36;
+    background: #2A2D36;
     color: white;
 }
-
 input:focus,
 select:focus,
 textarea:focus {
-    border: 2px solid #007bff;
+    border: 2px solid #007BFF;
 }
-
 /* Labels y textos */
 label,
 p,
@@ -183,14 +164,13 @@ span {
     font-size: 19px;
     color: white;
 }
-
 /* Botones */
 button,
 .Iniciar {
     width: 405px;
     /* tamaño original */
     padding: 12px;
-    background: #007bff;
+    background: #007BFF;
     border: none;
     border-radius: 12px;
     color: white;
@@ -199,16 +179,14 @@ button,
     margin-top: 12px;
     transition: background 0.3s;
 }
-
 button:hover,
 .Iniciar:hover {
-    background: #0056b3;
+    background: #0056B3;
 }
-
 /* Link "Crear cuenta" */
 #RegistroEstudianteFormulario,
 #RegistroDocenteFormulario {
-    color: #007bff;
+    color: #007BFF;
     cursor: pointer;
     display: inline-block;
     margin-top: 10px;
