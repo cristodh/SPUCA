@@ -68,6 +68,7 @@ async function agregarSolicitud() {
     }
     const peticion = await postData("solicitudes", usuarioSolicitud)
     console.log(peticion);
+    window.location.href = "../pages/perfilEstudiante.html"
 }
 
 
