@@ -32,6 +32,9 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
+    background-image: url(../imgs/FONDO_BLANCO.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* Header */
@@ -53,6 +56,7 @@ header {
     height: 175px;
     background: url(../imgs/fondoPortada2.png);
     background-size: cover;
+    
 }
 
 .logoFwd {
@@ -90,8 +94,6 @@ header {
 }
 
 
-
-
 /* ===== Layout principal ===== */
 .columnas {
     position: relative;
@@ -101,7 +103,7 @@ header {
     grid-template-columns: 360px 1fr;
     /* Izq fija, der flexible */
     gap: 75px;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 24px auto;
     padding: 0 16px;
     margin-top: 70px;
@@ -112,16 +114,15 @@ header {
     background-color: rgb(255 255 255 / 80%);
     backdrop-filter: blur(10px);
     border-radius: 16px;
-    box-shadow: -7px 42px 52px 20px rgba(0,0,0,0.1);
+    box-shadow: -7px 42px 52px 20px rgba(0,0,0,0.2);
     overflow: hidden;
+    /* oculta la portada redondeada */
     text-align: center;
     animation: fadeInUp .8s ease-out;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: -200px;
-    height: 820px;
-    max-height: 900px;
 }
 
 
@@ -155,22 +156,19 @@ header {
 }
 
 /* efecto flotante al hover */
-.columnaI:hover {
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
-}
+
 
 /* ===== Columna Derecha (tabs + tarjetas) ===== */
 .columnaD {
-    background-color: white;
-    height: 575px;
-    max-height: 575px;
-    width: 800px;
+    background-color: rgb(30, 30, 30 / 20%);
+    backdrop-filter: blur(10px);
     padding: 20px;
-    border-radius: 25px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.279);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     display: flex;
-    flex-direction: column ;
-    overflow: scroll;
+    flex-direction: column;
+    margin-top: -50px
+    
 }
 
 /* Tabs */
@@ -233,13 +231,14 @@ header {
     box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
     animation: fadeInUp .8s ease-out;
     transition: background-color .25s ease, transform .1s ease, box-shadow .25s ease;
+    width: 320px;
 }
 
 .info-solicitud:hover {
     background-color: #c8e4f5;
     /* hover con #FFD35B */
     transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
 .foto-usuario {

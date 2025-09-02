@@ -22,5 +22,21 @@ async function getData(endpoint) {
   }
 }
 
-export {postData,getData}
+async function patchData(endpoint, obj) {
+  try {
+    const peticion = await fetch(`http://localhost:2929/${endpoint}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(obj)
+    });
+    return await peticion.json();
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+
+
+export {postData,getData,patchData}
 

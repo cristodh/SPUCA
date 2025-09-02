@@ -6,6 +6,13 @@ const numeroC = document.getElementById("numeroC");
 const sede = document.getElementById("sede");
 const cpuAsignada = document.getElementById("cpuAsignada");
 const solicitud = document.getElementById("solicitud");
+const btnLogout = document.getElementById("logout");
+
+btnLogout.addEventListener("click", () => {
+  localStorage.clear();
+  window.location.href = "../pages/logoSPUCA.html";
+});
+
 
 
 async function traerInfoEstudiante() {
@@ -22,21 +29,31 @@ async function estructuraSolicitudes() {
     const solicitudes = await getData('solicitudes');
     const solicitudesFiltro = solicitudes.filter((solicitud)=> solicitud.cedulaSolicitante == localStorage.getItem('cedulaUsuario'))
     solicitudesFiltro.forEach((solicitudFiltrada)=>{
+
+        //div
         const divSolicitud = document.createElement('div')
         divSolicitud.setAttribute('class','info-solicitud')
+
+        //imagenPerfil
         const imgUsuario = document.createElement('img')
         imgUsuario.setAttribute('src','../imgs/chico.png')
         imgUsuario.classList.add('foto-usuario')
+
+        //nombre
         const pNombre = document.createElement('p')
         const strongNombre = document.createElement('strong')
         strongNombre.textContent = 'Nombre: '
         pNombre.appendChild(strongNombre)
         pNombre.innerHTML += solicitudFiltrada.nombreSolicitante
+
+        //fechas
         const pFecha = document.createElement('p')
         const strongFecha = document.createElement('strong')
         strongFecha.textContent = 'Fecha: '
         pFecha.appendChild(strongFecha)
         pFecha.innerHTML += `Desde ${solicitudFiltrada.fechaSalida} hasta ${solicitudFiltrada.fechaEntrega}`
+
+        //estadoSolicitud
         const pEstado = document.createElement('p')
         const strongEstado = document.createElement('strong')
         strongEstado.innerHTML += 'Estado: '
@@ -56,14 +73,3 @@ async function estructuraSolicitudes() {
 }
 estructuraSolicitudes()
 traerInfoEstudiante()
-
-
-
-// <div class="info-solicitud">
-//                             <img src="../imgs/chico.png" class="foto-usuario">
-//                             <p><strong>Nombre:</strong> Juan Pérez</p>
-//                             <p><strong>Fecha:</strong> 2025-08-27</p>
-//                             <p><strong>Estado:</strong> Pendiente</p>
-//                         </div>
-
-
