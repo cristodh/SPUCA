@@ -8,7 +8,7 @@
 </head>
   <header>
     <h1>ADMIN TOOLS</h1>
-    <button>Log Out</button>
+     <button id="logout"><img src="../imgs/salida blanco.png" id="imgLogo" alt=""></button>
   </header>
 
   <main>
@@ -17,8 +17,9 @@
       <h2>Asignación de CPUs</h2>
       <input id="studentName" type="text" placeholder="Nombre de Estudiante">
       <input id="serialNumber" type="text" placeholder="Número de Serie">
-      <button onclick="assignCPU()">Asignar</button>
+      <button id="btnAsignar">Asignar</button>
     </div>
+    
 
     <!-- Asignación de Tokens -->
     <div class="card">
@@ -37,7 +38,7 @@
   </main>
 
   <!-- Ingreso nuevas comptadoras -->
-  <div>
+  <div class="card">
     <h2>Ingreso nuevas computadoras</h2>
     <input id="newSerial" type="text" placeholder="Número de Serie">
     <button onclick="addComputer()">Agregar</button>

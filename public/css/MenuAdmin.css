@@ -103,7 +103,7 @@ header {
     grid-template-columns: 360px 1fr;
     /* Izq fija, der flexible */
     gap: 75px;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 24px auto;
     padding: 0 16px;
     margin-top: 70px;
@@ -170,7 +170,8 @@ header {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.279);
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    margin-top: -50px
+    
 }
 
 /* Tabs */
@@ -233,6 +234,7 @@ header {
     box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
     animation: fadeInUp .8s ease-out;
     transition: background-color .25s ease, transform .1s ease, box-shadow .25s ease;
+    width: 320px;
 }
 
 .info-solicitud:hover {
