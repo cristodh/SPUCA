@@ -1,48 +1,63 @@
-import {postData, getData, patchData} from '../services/fetch2';
+import { getData, patchData, postData } from "../services/fetch2.js";
 
+const newSerial = document.getElementById('newSerial'); 
+const btnAgregar = document.getElementById('btnAgregar');
+const btnAsignar = document.getElementById('btnAsignar');
 
-async function estructuraSolicitudes() {
+const estudiantes = document.getElementById('estudiantes');
+const numerosSerie = document.getElementById('numerosSerie');
+
+async function cargarSelects() {
     const listaEstudiantes = await getData('estudiantes');
-    listaEstudiantes.forEach((soli)=>{
-        
-        //div
-        const divSolicitud = document.createElement('div')
-        divSolicitud.setAttribute('class','info-solicitud')
-
-        //imagenPerfil
-        const imgUsuario = document.createElement('img')
-        imgUsuario.setAttribute('src','../imgs/chico.png')
-        imgUsuario.classList.add('foto-usuario')
-
-        //nombre
-        const pNombre = document.createElement('p')
-        const strongNombre = document.createElement('strong')
-        strongNombre.textContent = 'Nombre: '
-        pNombre.appendChild(strongNombre)
-        pNombre.innerHTML += soli.nombreSolicitante
-
-        //fechas
-        const pFecha = document.createElement('p')
-        const strongFecha = document.createElement('strong')
-        strongFecha.textContent = 'Fecha: '
-        pFecha.appendChild(strongFecha)
-        pFecha.innerHTML += `Desde ${soli.fechaSalida} hasta ${soli.fechaEntrega}`
-
-        //estadoSolicitud
-        const pEstado = document.createElement('p')
-        const strongEstado = document.createElement('strong')
-        strongEstado.innerHTML += 'Estado: '
-        pEstado.appendChild(strongEstado)
-        pEstado.innerHTML += soli.estado
+    const listaComputadoras = await getData('cpu');
+    const filtroDisponibles = listaComputadoras.filter((computadora)=>computadora.estado === 'Disponible');
+    listaEstudiantes.forEach((estudiante)=>{
+        if (estudiante.serial != null) {
+            return   
+        }
+        const option = document.createElement('option');
+        option.value = estudiante.id
+        option.textContent = estudiante.NombreEstudiante + " " + estudiante.ApellidosEstudiante;
 
 
-        divSolicitud.appendChild(imgUsuario)
-        divSolicitud.appendChild(pNombre)
-        divSolicitud.appendChild(pFecha)
-        divSolicitud.appendChild(pEstado)
-
-        solicitud.appendChild(divSolicitud)
-        console.log(solicitud);
+        estudiantes.appendChild(option);
+    })
+    filtroDisponibles.forEach((computadora)=>{
+        const option = document.createElement('option');
+        option.value = computadora.serial
+        option.textContent = computadora.serial;
+        localStorage.setItem('idPc',computadora.id)
+        numerosSerie.appendChild(option);
     })
 }
-estructuraSolicitudes()
+
+async function agregarPc() {
+    if (newSerial.value.trim() === '') {
+        alert('Por favor ingrese un número de serie válido.');
+        return;
+    }
+    const numeroSerie = `${newSerial.value}-2025-${Math.floor(Math.random() * 99)}`;
+    const objPc = {
+        serial: numeroSerie,
+        estado: 'Disponible'
+    }
+    const peticion = await postData('cpu',objPc)
+    console.log(peticion);
+    alert(`Computadora con número de serie ${numeroSerie} agregada exitosamente.`);
+    newSerial.value = '';
+}
+btnAgregar.addEventListener('click', agregarPc);
+
+async function asignarPc() {
+    const objAsignacion = {
+        serial: numerosSerie.value,
+    }
+    const peticion = await patchData('estudiantes',objAsignacion,estudiantes.value)
+    console.log(peticion);
+    const cambiarEstado = await patchData('cpu',{estado:'Asignada'},localStorage.getItem('idPc'))
+    cargarSelects()
+}
+
+
+cargarSelects();
+btnAsignar.addEventListener('click',asignarPc)

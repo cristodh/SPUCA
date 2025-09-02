@@ -13,7 +13,8 @@
       "sede": "c",
       "Provincia": "San José",
       "direccionCompleta": "san rafa",
-      "telefonoEstudiante": "+50486089212"
+      "telefonoEstudiante": "+50486089212",
+      "serial": "Lenovo-2025-58"
     },
     {
       "id": "4edf",
@@ -59,7 +60,18 @@
       "modalidad": "presencial"
     }
   ],
-  "cpu": [],
+  "cpu": [
+    {
+      "id": "7010",
+      "serial": "Hp-2025-59",
+      "estado": "Disponible"
+    },
+    {
+      "id": "8418",
+      "serial": "Lenovo-2025-58",
+      "estado": "Asignada"
+    }
+  ],
   "solicitudes": [
     {
       "id": "5c19",

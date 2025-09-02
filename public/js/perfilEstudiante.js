@@ -22,7 +22,7 @@ async function traerInfoEstudiante() {
     correo.textContent = estudianteFiltrado[0].emailEstudianteR
     numeroC.textContent = estudianteFiltrado[0].CedulaEstudiante
     sede.textContent = estudianteFiltrado[0].sede
-    cpuAsignada.textContent = estudianteFiltrado[0].cpuAsignada
+    cpuAsignada.textContent = estudianteFiltrado[0].serial
     console.log(estudianteFiltrado[0].NombreEstudiante)
 }
 async function estructuraSolicitudes() {

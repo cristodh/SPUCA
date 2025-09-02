@@ -20,7 +20,7 @@ async function rellenarInfo() {
     numeCe.value = estudianteFiltrado[0].CedulaEstudiante
     correo.value = estudianteFiltrado[0].emailEstudianteR
     sede.value = estudianteFiltrado[0].sede
-    cpuAsignada.value = estudianteFiltrado[0].cpuAsignada
+    cpuAsignada.value = estudianteFiltrado[0].serial
     console.log(estudianteFiltrado[0].NombreEstudiante)
 }
 rellenarInfo()
@@ -63,7 +63,7 @@ async function agregarSolicitud() {
         sedeSolicitante: sede.value,
         fechaSalida: fechaSa.value,
         fechaEntrega: fechaEn.value,
-        cpu: cpuAsignada.value,
+        cpu: serial.value,
         estado: "En revisión"
     }
     const peticion = await postData("solicitudes", usuarioSolicitud)

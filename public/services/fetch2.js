@@ -22,9 +22,9 @@ async function getData(endpoint) {
   }
 }
 
-async function patchData(endpoint, obj) {
+async function patchData(endpoint, obj,id) {
   try {
-    const peticion = await fetch(`http://localhost:2929/${endpoint}`, {
+    const peticion = await fetch(`http://localhost:2929/${endpoint}/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
