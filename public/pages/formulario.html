@@ -9,25 +9,21 @@
 </head>
 
 <body>
-    <form action="">
+    <form id="form" action="">
         <div class="contenedorGeneral">
             <h2>Formulario de Solicitud de Permiso</h2>
             <div class="infoPersonal">
                 <label for="Nombre">Nombre completo</label>
-                <input type="text" id="nombreC" placeholder="Nombre completo"><br>
+                <input type="text" id="nombreC" value="Solo lectura" readonly><br>
 
                 <label for="numeroCe">Número de cédula</label>
-                <input type="text" name="numeCe" id="numeCe" placeholder="0-0000-0000" maxlength="12"><br>
+                <input type="text" name="numeCe" id="numeCe" value="Solo lectura" readonly><br>
 
                 <label for="correo">Correo Electrónico</label>
-                <input type="email" id="correo" placeholder="Correo Electrónico"><br>
+                <input type="email" id="correo" value="Solo lectura" readonly><br>
 
                 <label for="sede" >Sede</label>
-                <select name="selecSede" id="sede" id="selecSede"> 
-                    <option value="capri">La Capri</option>
-                    <option value="puntarenas">Puntarenas</option>
-                    <option value="virtual">Virtual</option>
-                </select> <br>
+                <input type="text" id="sede" placeholder="Sede actual"><br>
 
                 <label for="fechaS">Fecha de Salida</label>
                 <input type="date" name="fechaSa" id="fechaSa"><br>
@@ -35,16 +31,17 @@
                 <label for="fechaE">Fecha de entrega</label>
                 <input type="date" name="fechaEn" id="fechaEn"><br>
 
-                <label for="Nombre">Modelo de la pc</label>
-                <input type="text" id="modeloPc" placeholder="Modelo de Pc"><br>
+                <label for="Nombre">Computadora Asignada</label>
+                <input type="text" id="cpuAsignada" value="Solo lectura" readonly><br>
 
-                <a href="pdf">Pdf de terminos y condiciones</a>
+                <a href="../docs/Terminos_y_Condiciones_Equipos_Legal.pdf" target="_blank">Ver Terminos y Condiciones</a>
 
                 <div class="checkContenedor">    
                     <label for="acepto" id="acepto">
                         <input type="checkbox" name="terminosCond" id="checkacepto">Acepto los términos y condiciones</label>
                 </div>
 
+                <p id="mensaje"></p>
 
 
                 <button id="enviar">enviar</button><br>

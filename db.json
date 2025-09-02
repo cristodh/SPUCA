@@ -18,8 +18,8 @@
     {
       "id": "4edf",
       "NombreEstudiante": "Moli",
-      "ApellidosEstudiante": "Correa Abarca",
-      "CedulaEstudiante": "117270841",
+      "ApellidosEstudiante": "Corea Abarca",
+      "CedulaEstudiante": "12345678",
       "fechaEstudiante": "21/11/1998",
       "emailEstudianteR": "moli@gmail.com",
       "passwordEstudianteR": "1234",
@@ -53,13 +53,68 @@
       "NombreDocente": "Jeank",
       "ApellidosDocente": "Barberena",
       "CedulaDocente": "12345678",
-      "CorreoElectronicoDocenteR": "jkmachadofwd@gmail.com",
+      "CorreoElectronicoDocenteR": "jeanca@gmail.com",
       "passwordDocenteR": "1234",
       "telefonoDocente": "+50484153769",
       "modalidad": "presencial"
     }
   ],
   "cpu": [],
+  "solicitudes": [
+    {
+      "id": "5c19",
+      "nombreSolicitante": "Chris",
+      "cedulaSolicitante": "116540496",
+      "correoSolicitante": "chris@gmail.com",
+      "sedeSolicitante": "capri",
+      "fechaSalida": "2025-09-01",
+      "fechaEntrega": "2025-09-10",
+      "cpu": "jdaskdaskdnja"
+    },
+    {
+      "id": "1af0",
+      "nombreSolicitante": "Moli Corea Abarca",
+      "cedulaSolicitante": "12345678",
+      "correoSolicitante": "moli@gmail.com",
+      "sedeSolicitante": "La Capri",
+      "fechaSalida": "2025-09-01",
+      "fechaEntrega": "2025-09-02",
+      "cpu": "undefined",
+      "estado": "pendiente"
+    },
+    {
+      "id": "a779",
+      "nombreSolicitante": "Moli Corea Abarca",
+      "cedulaSolicitante": "12345678",
+      "correoSolicitante": "moli@gmail.com",
+      "sedeSolicitante": "cDASDA",
+      "fechaSalida": "2025-09-02",
+      "fechaEntrega": "2025-09-26",
+      "cpu": "undefined"
+    },
+    {
+      "id": "3b8d",
+      "nombreSolicitante": "Moli Corea Abarca",
+      "cedulaSolicitante": "12345678",
+      "correoSolicitante": "moli@gmail.com",
+      "sedeSolicitante": "c",
+      "fechaSalida": "2025-09-01",
+      "fechaEntrega": "2025-09-07",
+      "cpu": "undefined",
+      "estado": "En revisión"
+    },
+    {
+      "id": "31ec",
+      "nombreSolicitante": "Moli Corea Abarca",
+      "cedulaSolicitante": "12345678",
+      "correoSolicitante": "moli@gmail.com",
+      "sedeSolicitante": "c",
+      "fechaSalida": "2025-09-01",
+      "fechaEntrega": "2025-09-02",
+      "cpu": "undefined",
+      "estado": "En revisión"
+    }
+  ],
   "admins": [
     {
       "usuario": "AML",

@@ -49,14 +49,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnAtras = document.getElementById("bntAtras");
 
   btnCrearEst.addEventListener("click", () => {
-    document.body.style.backgroundImage =
+    document.body.style.background =
       'linear-gradient(to right, #1b1e27, #1b1e27, #1f212893, rgba(0, 0, 0, 0)), url("../imgs/computadoras.jpg")';
     loginEst.style.display = "none";
     formEst.style.display = "block";
   });
 
   btnAtras.addEventListener("click", () => {
-    document.body.style.backgroundImage =
+    document.body.style.background=
       'linear-gradient(to right, #1b1e27, #1b1e27, #1f212893, rgba(0, 0, 0, 0)), url("../imgs/laptop dia.jpg")';
     formEst.style.display = "none";
     loginEst.style.display = "block";
@@ -69,14 +69,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnAtras2 = document.getElementById("bntAtras2");
 
   btnCrearDoc.addEventListener("click", () => {
-    document.body.style.backgroundImage =
+    document.body.style.background =
       'linear-gradient(to right, #1b1e27, #1b1e27, #1f212893, rgba(0, 0, 0, 0)), url("../imgs/profe explicando vertical.jpg")';
     loginDoc.style.display = "none";
     formDoc.style.display = "block";
   });
 
   btnAtras2.addEventListener("click", () => {
-    document.body.style.backgroundImage =
+    document.body.style.background=
       'linear-gradient(to right, #1b1e27, #1b1e27, #1f212893, rgba(0, 0, 0, 0)), url("../imgs/profe en pizarra.jpg")';
     formDoc.style.display = "none";
     loginDoc.style.display = "block";
@@ -197,6 +197,7 @@ btnISEstudiante.addEventListener("click", async () => {
   if (estudianteEncontrado) {
     alert(`✅ Ingreso exitoso. ¡Bienvenido ${estudianteEncontrado.NombreEstudiante} ${estudianteEncontrado.ApellidosEstudiante}!`);
     localStorage.setItem("idUsuario",estudianteEncontrado.id)
+    localStorage.setItem("cedulaUsuario",estudianteEncontrado.CedulaEstudiante)
     window.location.href = "../pages/perfilEstudiante.html"; // redirección
   } else {
     alert("❌ Usuario o contraseña incorrectos.");
